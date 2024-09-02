@@ -1,0 +1,47 @@
+SPI Bit Bang
+============
+
+SPI works in different modes depending on wire count (3 to 4, MISO and MOSI can be 1 wire),
+polarity refers to the idle state of the SPI (0 or 1 when master is not transmitting or receiving)
+, phase refers to when are we clocking in and clocking out data (phase of 1 is shifting the start of the data half the period of the clock).
+
+    The structure of PORT
+    ======================
+    https://developerhelp.microchip.com/xwiki/bin/view/products/mcu-mpu/8-bit-avr/structure/ioports/#:~:text=These%20pins%20are%20usually%20organized,%2C%20PortA%2C%20PortB%2C%20etc
+
+    All ports have true Read-Modify-Write functionality when used as GDIO ports. Changing one
+    pins direction, output drive (for output), or enabling/disabling pull-up resistors wont 
+    effect the other pins. 
+
+    protection diodes only allow current to flow in one direction and prevents random 
+    voltage spikes.
+
+    port consists of 3 registers -- DDRx : Data Direction Register
+                                    PORTx : Pin Output Register
+                                    PINx : Pin Inputer Register
+                                    
+    DDxn bits are accessed at DDRx I/0 address -- select the direction of the pin
+        if DDxn is written to 1 Pxn is configured to output and 0 for input
+
+    PORTxn bits at the PORTx I/O address -- controls output state of bin and setup of input pin
+        if pin is output and a 1 is written then pin is driven high, 0 drives low
+        if pin is input and 1 is written then pull up resistor is activated, 0 makes tri-state
+        (tri-state -- floating state (copies nearby voltages) -- unconnected pin)
+    
+    PINxn bits at the PINx I/O address -- used to read data from the port pin. When pin is
+        configured in digital input, in the DDRx register, and the pull up in enabled, the 
+        bit will indicate the state of the signal at the pin (high or low).
+    
+        if pin is configured in output then reading the register will give youi the data 
+        that has been write to the port pins. 
+            
+        In Tri-state input configuration (floating -- disconnected pin), state
+        cannot be determined since surrounding objects change the logic state of the pin.
+        Therefore pin cannot be read. 
+    
+
+
+
+
+
+
