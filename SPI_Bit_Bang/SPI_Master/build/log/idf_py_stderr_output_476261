@@ -1,0 +1,13 @@
+[0;33m--- esp-idf-monitor 1.4.0 on /dev/ttyUSB0 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d7f53: task_wdt_timeout_handling at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8318: task_wdt_isr at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40082d71: _xt_lowint1 at /home/kbuntu/ESP32/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d6a11: gpio_set_level at /home/kbuntu/ESP32/esp-idf/components/esp_driver_gpio/src/gpio.c:241
+0x400d5ec0: app_main at /home/kbuntu/ESP32/SPI_Bit_Bang/SPI_Master/main/SPI_Master_Demo.c:12
+0x400e413c: main_task at /home/kbuntu/ESP32/esp-idf/components/freertos/app_startup.c:208
+0x40085dfd: vPortTaskWrapper at /home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m
