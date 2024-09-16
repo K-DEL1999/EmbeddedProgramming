@@ -1,6 +1,6 @@
 // TO FUTURE ME
 
-// We can this code with timer and saw that receive on average took about 
+// We ran this code with timer and saw that receive on average took about 
 //  1 000 000 us because of its polling behavior -- waiting for response from
 //  slave. If possible optimize.
 
