@@ -1,0 +1,40 @@
+I2C
+===
+
+Has 2 wires -- SDA(Serial Data) and SCL(Serial Clock). SDA is the line
+for master and slave to send and receive data. SCL is the line which carries
+the clock signal. This is a serial communication protocol meaning that data 
+is transferred bit by bit. I2C is synchronous meaning that the output of bits 
+is synchronized to the sampling of bits by a clock signal shared between 
+master and slave - clock controlled by master.
+
+I2C transfers data in messages. Messages are broken up into frames of data. 
+Each message has an address frame - contains binary address of slave -- and one
+or more data frames that contain the data being transmitted. The messages also
+include start and stop conditions, read/write bits, and ack/no_ack bits between
+each frame. Data frames are limited to 8 bits. 
+
+    MAKE UP OF MESSAGE
+    ==================
+    start condtion - SDA goes from high to low before SCL goes from high to low 
+    address frame - 7 to 10 bit sequence unique to each slave
+    r/w bit - bit specifying if master wants to send or request data
+    ack/no_ack bit - following every data frame sending ACK/NO_ACK
+    data frame(byte) - data
+    ack/no_ack bit
+    data frame(byte) 
+    ...
+    ack/no_ack bit
+    stop condtion - SDA goes from low to high after SCL goes from low to high
+        
+We need opendrain input/output lines
+- the smaller the resistance the faster the response.
+
+External pull ups are created by adding another jumper cable -- wire -- to the bus with either
+a 3.3V/5V -- basically any voltage the microcontroller can handle -- or ground on the other end.
+If connected to power it will be a pull up, if connected to ground it will be a pull down.
+The pins must be open drain in order for the high impedance values to be pulled high/low. 
+If we only allow the pull ups to pull the pins high then we prevent 2 controllers setting
+the bus high at the same time, short circuiting everything on the bus. The open drain creates an
+environment where you can only set the pin to floating and low. Pull up pulls floating states high.
+

@@ -1,0 +1,16 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d7dce: find_entry_from_task_handle_and_check_all_reset at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:150
+[0m
+[0;33m--- 0x400d7dcb: find_entry_from_task_handle_and_check_all_reset at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:150
+0x400d8269: esp_task_wdt_reset at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:704
+0x400d82b7: idle_hook_cb at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:460
+0x400d2149: esp_vApplicationIdleHook at /home/kbuntu/ESP32/esp-idf/components/esp_system/freertos_hooks.c:46 (discriminator 1)
+0x40086bee: prvIdleTask at /home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:4344 (discriminator 1)
+0x40085dfd: vPortTaskWrapper at /home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

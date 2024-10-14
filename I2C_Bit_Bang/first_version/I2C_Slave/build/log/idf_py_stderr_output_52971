@@ -1,0 +1,21 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400d8053: task_wdt_timeout_handling at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8418: task_wdt_isr at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40082d71: _xt_lowint1 at /home/kbuntu/ESP32/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d600d: await_request at /home/kbuntu/ESP32/I2C_Bit_Bang/I2C_Slave/main/I2C_Slave_Source.c:42
+0x400d5ec2: app_main at /home/kbuntu/ESP32/I2C_Bit_Bang/I2C_Slave/main/I2C_Slave_Demo.c:10 (discriminator 1)
+0x400e4214: main_task at /home/kbuntu/ESP32/esp-idf/components/freertos/app_startup.c:208
+0x40085dfd: vPortTaskWrapper at /home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x400d8053: task_wdt_timeout_handling at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:434
+0x400d8418: task_wdt_isr at /home/kbuntu/ESP32/esp-idf/components/esp_system/task_wdt/task_wdt.c:507
+0x40082d71: _xt_lowint1 at /home/kbuntu/ESP32/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x400d600d: await_request at /home/kbuntu/ESP32/I2C_Bit_Bang/I2C_Slave/main/I2C_Slave_Source.c:42
+0x400d5ec2: app_main at /home/kbuntu/ESP32/I2C_Bit_Bang/I2C_Slave/main/I2C_Slave_Demo.c:10 (discriminator 1)
+0x400e4214: main_task at /home/kbuntu/ESP32/esp-idf/components/freertos/app_startup.c:208
+0x40085dfd: vPortTaskWrapper at /home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0m

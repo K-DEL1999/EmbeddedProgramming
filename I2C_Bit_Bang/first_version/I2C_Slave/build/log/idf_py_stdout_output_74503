@@ -1,0 +1,10 @@
+[1/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/I2C_Slave_Demo.c.obj
+[2/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/I2C_Slave_Source.c.obj
+/home/kbuntu/ESP32/I2C_Bit_Bang/I2C_Slave/main/I2C_Slave_Source.c: In function 'await_request':
+/home/kbuntu/ESP32/I2C_Bit_Bang/I2C_Slave/main/I2C_Slave_Source.c:30:13: warning: unused variable 'array' [-Wunused-variable]
+   30 |     uint8_t array[8];
+      |             ^~~~~
+[3/11] Performing build step for 'bootloader'
+[1/1] cd /home/kbuntu/ESP32/I2C_Bit_Bang/I2C_Slave/build/bootloader/esp-idf/esptool_py && /home/kbuntu/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/kbuntu/ESP32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/kbuntu/ESP32/I2C_Bit_Bang/I2C_Slave/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[4/9] Linking C static library esp-idf/main/libmain.a
