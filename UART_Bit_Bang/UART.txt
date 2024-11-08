@@ -1,0 +1,49 @@
+UART -- Universal Asynchronous Receive Transmit
+====
+
+This is a serial protocol that does not use a clock. A baud rate
+is given which is the measurement of how many times a signal changes
+per second in a communication channel. Rate at which information is 
+transferred in a communication channel.
+
+UART requires the user to know the difference between bits per second
+and baud rate. Bits per second is how many bits can be sent in a second.
+Baud rate refers to the number of symbols that can be send in a second.
+Symbols in this case refer to the indivisible elements of you data
+encoding. 
+source --- https://stackoverflow.com/questions/20534417/what-is-the-difference-between-baud-rate-and-bit-rate
+
+The symbol can also be seen as the number of bits in a signal -- which is know
+as the as the signal unit.
+
+WHEN THE SIGNAL IS BINARY, THE BAUD RATE AND BIT RATE ARE THE SAME.
+
+
+NOW TO THE PROTOCOL
+===================
+
+The protocol has 2 lines -- Tx(Transmit) and Rx(Receive). Tx connects to the Rx of
+the other device and Rx connects to Tx. A baud rate is defined which determines
+how many packets are sent in a second. A packet in UART is made up of a start bit,
+data frame, polarity bit and stop bits. 
+    
+    Start Bit -- Tx is normally held HIGH when not transmitting. Tx is pulled low for
+        1 bit then sends data. Rx is awoken by the start bit and then starts reading
+        the data frame
+
+    Data frame -- contains data which can be 5-8 bits long. If no parity bit is used then
+        data can be 9 bits long.
+
+    Parity Bit -- Bit that tells receiver whether there are an even number of 1s which is 0
+        or whether there are an odd number of 1s which is 1.
+
+    Stop Bits -- drive transmission line HIGH for atleast 2 bits. 
+   
+The rate at which a bit is send is calculated by -- 1s/baud_rate
+
+
+deep sleep takes about 230 ms to wake up from
+light sleep takes about 400-500 us to wake up from
+
+
+
