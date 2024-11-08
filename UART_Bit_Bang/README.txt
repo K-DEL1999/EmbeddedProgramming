@@ -14,7 +14,8 @@
 // tool. I am very grateful we decided to learn how to use the gdb debugger.
 // I was able to get to 125000 baudrate -- 8 us DELAY. Anything after that was
 // too unstable. Even with the 125000 baudrate I was still getting a few 
-// corrupted packets.
+// corrupted packets. Great job, this project really encouraged you to use the
+// debugger and a different timer.
 
 
 // THINGS TO IMPROVE
@@ -26,3 +27,4 @@
 
 // Try to correct the corrupted packets that come up once and a while
 
+// Logging system
