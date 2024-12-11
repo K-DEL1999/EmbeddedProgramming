@@ -1,0 +1,822 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 22 2024 19:36:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a224h ( 41508) map[0m
+[0;32mI (118) esp_image: segment 1: paddr=0001a24c vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (119) esp_image: segment 2: paddr=0001a258 vaddr=3ffb0000 size=02374h (  9076) load[0m
+[0;32mI (128) esp_image: segment 3: paddr=0001c5d4 vaddr=40080000 size=03a44h ( 14916) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=15cd4h ( 89300) map[0m
+[0;32mI (172) esp_image: segment 5: paddr=00035cfc vaddr=40083a44 size=09500h ( 38144) load[0m
+[0;32mI (193) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (194) boot: Disabling RNG early entropy source...[0m
+[0;32mI (205) cpu_start: Multicore app[0m
+[0;32mI (214) cpu_start: Pro cpu start user code[0m
+[0;32mI (214) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (214) app_init: Application information:[0m
+[0;32mI (217) app_init: Project name:     MAX4466_Driver[0m
+[0;32mI (222) app_init: App version:      1[0m
+[0;32mI (227) app_init: Compile time:     Nov 22 2024 19:36:08[0m
+[0;32mI (233) app_init: ELF file SHA256:  5b4ff8ce0...[0m
+[0;32mI (238) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (243) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (247) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (252) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (257) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (264) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (270) heap_init: At 3FFB2C80 len 0002D380 (180 KiB): DRAM[0m
+[0;32mI (277) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (283) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (289) heap_init: At 4008CF44 len 000130BC (76 KiB): IRAM[0m
+[0;32mI (297) spi_flash: detected chip: generic[0m
+[0;32mI (300) spi_flash: flash io: dio[0m
+[0;33mW (304) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (318) main_task: Started on CPU0[0m
+[0;32mI (328) main_task: Calling app_main()[0m
+[0;31mE (328) gpio: GPIO can only be used as input mode[0m
+[0;31mE (328) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (328) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (338) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (348) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (348) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (358) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (378) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (388) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (388) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (398) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (418) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (428) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (428) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (438) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (448) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (448) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (458) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (458) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (468) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (478) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (478) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (488) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (498) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (498) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (508) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (518) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (518) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (528) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (538) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (538) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (548) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (568) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (578) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (578) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (588) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (608) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (618) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (618) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (628) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (628) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (638) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (648) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (648) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (658) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (668) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (668) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (678) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (688) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (688) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (698) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (708) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (708) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (718) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (728) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (728) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (738) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (748) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (748) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (758) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (768) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (768) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (778) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (778) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (788) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (798) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (798) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (808) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (818) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (818) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (828) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (838) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (838) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (848) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (858) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (858) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (868) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (878) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (878) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (888) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (898) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (898) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (908) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (918) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (918) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (928) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (928) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (938) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (948) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (948) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (958) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (968) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (968) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (978) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (988) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (988) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (998) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1008) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1008) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1018) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1028) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1028) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1038) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1048) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1048) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1058) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1068) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1068) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1078) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1088) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1088) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1098) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1108) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1108) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1118) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1128) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1128) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1138) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1148) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1148) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1158) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1168) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1168) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1178) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1178) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1188) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1198) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1198) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1208) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1218) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1218) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1228) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1238) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1238) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1248) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1258) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1258) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1268) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1278) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1278) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1288) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1298) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1298) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1308) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1318) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1318) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1328) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1338) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1338) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1348) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1358) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1358) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1378) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1378) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1388) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1398) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1398) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1418) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1418) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1428) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1438) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1438) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1448) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1458) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1458) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1468) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1478) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1478) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1488) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1498) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1498) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1508) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1518) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1518) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1528) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1538) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1538) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1548) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1568) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1568) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1578) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1588) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1608) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1608) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1618) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1628) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1628) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1638) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1648) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1648) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1658) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1668) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1668) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1678) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1688) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1688) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1698) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1708) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1708) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1718) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1728) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1728) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1738) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1748) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1748) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1758) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1768) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1768) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1778) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1788) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1788) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1798) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1808) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1808) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1818) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1828) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1828) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1838) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1848) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1848) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1858) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1868) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1868) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1878) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1888) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1888) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1898) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1908) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1908) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1918) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1928) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1928) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1938) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1948) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1948) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1958) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1968) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1968) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1978) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (1988) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1988) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1998) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (1998) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2008) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2018) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2018) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2028) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2038) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2038) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2048) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2058) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2058) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2068) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2078) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2078) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2088) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2098) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2098) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2108) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2118) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2118) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2128) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2138) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2138) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2148) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2158) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2158) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2168) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2178) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2178) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2188) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2198) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2198) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2208) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2218) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2218) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2228) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2238) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2238) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2248) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2258) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2258) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2268) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2278) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2278) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2288) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2298) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2298) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2308) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2318) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2318) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2328) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2338) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2338) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2348) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2358) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2358) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2378) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2388) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2388) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2398) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2418) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2428) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2428) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2438) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2448) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2448) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2458) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2468) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2468) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2478) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2488) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2488) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2498) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2508) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2508) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2518) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2528) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2528) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2538) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2548) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2548) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2568) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2568) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2578) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2588) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2588) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2608) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2608) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2618) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2628) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2628) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2638) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2648) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2648) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2658) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2668) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2668) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2678) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2688) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2688) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2698) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2708) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2708) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2718) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2728) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2728) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2738) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2748) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2748) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2758) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2768) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2768) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2778) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2788) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2788) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2798) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2798) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2808) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2818) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2818) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2828) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2838) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2838) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2848) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2858) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2858) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2868) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2878) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2878) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2888) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2898) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2898) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2908) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2918) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2918) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2928) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2938) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2938) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2948) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2958) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2958) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2968) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (2978) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2978) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2988) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2998) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (2998) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3008) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3018) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3018) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3028) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3038) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3038) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3048) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3058) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3058) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3068) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3078) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3078) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3088) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3098) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3098) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3108) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3118) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3118) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3128) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3138) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3138) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3148) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3158) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3158) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3168) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3178) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3178) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3188) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3188) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3198) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3208) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3218) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3218) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3228) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3228) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3238) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3248) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3248) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3258) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3268) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3268) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3278) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3288) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3288) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3298) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3308) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3308) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3318) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3328) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3328) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3338) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3348) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3348) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3358) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3378) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3388) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3388) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3398) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3418) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3428) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3428) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3438) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3448) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3448) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3458) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3468) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3468) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3478) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3488) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3488) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3498) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3508) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3508) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3518) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3528) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3528) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3538) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3548) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3548) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3568) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3578) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3588) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3588) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3608) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3618) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3618) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3628) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3638) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3638) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3648) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3658) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3658) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3668) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3678) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3678) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3688) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3698) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3698) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3708) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3718) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3718) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3728) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3738) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3738) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3748) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3758) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3758) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3768) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3778) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3778) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3788) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3798) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3798) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3808) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3818) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3818) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3828) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3838) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3838) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3848) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3858) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3858) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3868) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3878) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3878) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3888) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3898) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3898) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3908) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3918) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3918) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3928) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3938) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3938) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3948) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3958) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3958) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (3968) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3978) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3978) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3988) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3988) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (3998) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4008) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4008) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4018) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4028) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4028) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4038) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4048) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4048) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4058) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4068) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4068) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4078) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4088) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4088) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4098) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4108) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4108) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4118) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4128) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4128) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4138) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4148) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4148) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4158) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4168) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4168) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4178) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4188) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4188) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4198) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4208) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4208) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4218) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4228) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4228) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4238) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4248) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4248) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4258) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4268) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4268) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4278) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4288) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4288) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4298) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4308) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4308) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4318) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4328) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4328) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4338) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4348) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4348) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4358) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4368) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4378) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4378) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4388) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4398) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4408) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4418) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4418) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4428) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4438) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4438) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4448) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4458) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4458) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4468) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4478) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4478) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4488) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4498) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4498) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4508) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4518) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4518) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4528) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4538) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4538) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4548) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4558) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4568) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4578) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4578) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4588) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4598) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4608) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4618) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4618) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4628) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+[0;31mE (4638) gpio: gpio_set_level(238): GPIO output gpio_num error[0m
+4095 
+[0;31mE (4638) gpio: gpio_set_level(238): GPIO output gpio_num error[0m

@@ -1,0 +1,1012 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/kbuntu/ESP32/MAX4466_Driver/build/bootloader/esp-idf/esptool_py && /home/kbuntu/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/kbuntu/ESP32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/kbuntu/ESP32/MAX4466_Driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Source.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Source.c.obj 
+/home/kbuntu/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/kbuntu/ESP32/MAX4466_Driver/build/config -I/home/kbuntu/ESP32/MAX4466_Driver/main -I/home/kbuntu/ESP32/esp-idf/components/newlib/platform_include -I/home/kbuntu/ESP32/esp-idf/components/freertos/config/include -I/home/kbuntu/ESP32/esp-idf/components/freertos/config/include/freertos -I/home/kbuntu/ESP32/esp-idf/components/freertos/config/xtensa/include -I/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/kbuntu/ESP32/esp-idf/components/freertos/esp_additions/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/include/soc -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/dma/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/ldo/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/port/esp32/. -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/port/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/heap/include -I/home/kbuntu/ESP32/esp-idf/components/log/include -I/home/kbuntu/ESP32/esp-idf/components/soc/include -I/home/kbuntu/ESP32/esp-idf/components/soc/esp32 -I/home/kbuntu/ESP32/esp-idf/components/soc/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/hal/platform_port/include -I/home/kbuntu/ESP32/esp-idf/components/hal/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/hal/include -I/home/kbuntu/ESP32/esp-idf/components/esp_rom/include -I/home/kbuntu/ESP32/esp-idf/components/esp_rom/include/esp32 -I/home/kbuntu/ESP32/esp-idf/components/esp_rom/esp32 -I/home/kbuntu/ESP32/esp-idf/components/esp_common/include -I/home/kbuntu/ESP32/esp-idf/components/esp_system/include -I/home/kbuntu/ESP32/esp-idf/components/esp_system/port/soc -I/home/kbuntu/ESP32/esp-idf/components/esp_system/port/include/private -I/home/kbuntu/ESP32/esp-idf/components/xtensa/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/xtensa/include -I/home/kbuntu/ESP32/esp-idf/components/xtensa/deprecated_include -I/home/kbuntu/ESP32/esp-idf/components/lwip/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/include/apps -I/home/kbuntu/ESP32/esp-idf/components/lwip/include/apps/sntp -I/home/kbuntu/ESP32/esp-idf/components/lwip/lwip/src/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/freertos/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/esp32xx/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_gpio/include -I/home/kbuntu/ESP32/esp-idf/components/esp_pm/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/port/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/library -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/kbuntu/ESP32/esp-idf/components/esp_app_format/include -I/home/kbuntu/ESP32/esp-idf/components/esp_bootloader_format/include -I/home/kbuntu/ESP32/esp-idf/components/app_update/include -I/home/kbuntu/ESP32/esp-idf/components/bootloader_support/include -I/home/kbuntu/ESP32/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/kbuntu/ESP32/esp-idf/components/esp_partition/include -I/home/kbuntu/ESP32/esp-idf/components/efuse/include -I/home/kbuntu/ESP32/esp-idf/components/efuse/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/esp_mm/include -I/home/kbuntu/ESP32/esp-idf/components/spi_flash/include -I/home/kbuntu/ESP32/esp-idf/components/pthread/include -I/home/kbuntu/ESP32/esp-idf/components/esp_timer/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_gptimer/include -I/home/kbuntu/ESP32/esp-idf/components/esp_ringbuf/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_uart/include -I/home/kbuntu/ESP32/esp-idf/components/vfs/include -I/home/kbuntu/ESP32/esp-idf/components/app_trace/include -I/home/kbuntu/ESP32/esp-idf/components/esp_event/include -I/home/kbuntu/ESP32/esp-idf/components/nvs_flash/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_pcnt/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_spi/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_mcpwm/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_ana_cmpr/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_i2s/include -I/home/kbuntu/ESP32/esp-idf/components/sdmmc/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_sdmmc/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_sdspi/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_sdio/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_dac/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_rmt/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_tsens/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_sdm/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_i2c/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_ledc/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_parlio/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/kbuntu/ESP32/esp-idf/components/driver/deprecated -I/home/kbuntu/ESP32/esp-idf/components/driver/i2c/include -I/home/kbuntu/ESP32/esp-idf/components/driver/touch_sensor/include -I/home/kbuntu/ESP32/esp-idf/components/driver/twai/include -I/home/kbuntu/ESP32/esp-idf/components/driver/touch_sensor/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/esp_phy/include -I/home/kbuntu/ESP32/esp-idf/components/esp_phy/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/esp_vfs_console/include -I/home/kbuntu/ESP32/esp-idf/components/esp_netif/include -I/home/kbuntu/ESP32/esp-idf/components/wpa_supplicant/include -I/home/kbuntu/ESP32/esp-idf/components/wpa_supplicant/port/include -I/home/kbuntu/ESP32/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/kbuntu/ESP32/esp-idf/components/esp_coex/include -I/home/kbuntu/ESP32/esp-idf/components/esp_wifi/include -I/home/kbuntu/ESP32/esp-idf/components/esp_wifi/wifi_apps/include -I/home/kbuntu/ESP32/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/kbuntu/ESP32/esp-idf/components/esp_wifi/include/local -I/home/kbuntu/ESP32/esp-idf/components/unity/include -I/home/kbuntu/ESP32/esp-idf/components/unity/unity/src -I/home/kbuntu/ESP32/esp-idf/components/cmock/CMock/src -I/home/kbuntu/ESP32/esp-idf/components/console -I/home/kbuntu/ESP32/esp-idf/components/http_parser -I/home/kbuntu/ESP32/esp-idf/components/esp-tls -I/home/kbuntu/ESP32/esp-idf/components/esp-tls/esp-tls-crypto -I/home/kbuntu/ESP32/esp-idf/components/esp_adc/include -I/home/kbuntu/ESP32/esp-idf/components/esp_adc/interface -I/home/kbuntu/ESP32/esp-idf/components/esp_adc/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/esp_adc/deprecated/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_isp/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_cam/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_cam/interface -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_jpeg/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_ppa/include -I/home/kbuntu/ESP32/esp-idf/components/esp_eth/include -I/home/kbuntu/ESP32/esp-idf/components/esp_gdbstub/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hid/include -I/home/kbuntu/ESP32/esp-idf/components/tcp_transport/include -I/home/kbuntu/ESP32/esp-idf/components/esp_http_client/include -I/home/kbuntu/ESP32/esp-idf/components/esp_http_server/include -I/home/kbuntu/ESP32/esp-idf/components/esp_https_ota/include -I/home/kbuntu/ESP32/esp-idf/components/esp_https_server/include -I/home/kbuntu/ESP32/esp-idf/components/esp_psram/include -I/home/kbuntu/ESP32/esp-idf/components/esp_lcd/include -I/home/kbuntu/ESP32/esp-idf/components/esp_lcd/interface -I/home/kbuntu/ESP32/esp-idf/components/protobuf-c/protobuf-c -I/home/kbuntu/ESP32/esp-idf/components/protocomm/include/common -I/home/kbuntu/ESP32/esp-idf/components/protocomm/include/security -I/home/kbuntu/ESP32/esp-idf/components/protocomm/include/transports -I/home/kbuntu/ESP32/esp-idf/components/protocomm/include/crypto/srp6a -I/home/kbuntu/ESP32/esp-idf/components/protocomm/proto-c -I/home/kbuntu/ESP32/esp-idf/components/esp_local_ctrl/include -I/home/kbuntu/ESP32/esp-idf/components/espcoredump/include -I/home/kbuntu/ESP32/esp-idf/components/espcoredump/include/port/xtensa -I/home/kbuntu/ESP32/esp-idf/components/wear_levelling/include -I/home/kbuntu/ESP32/esp-idf/components/fatfs/diskio -I/home/kbuntu/ESP32/esp-idf/components/fatfs/src -I/home/kbuntu/ESP32/esp-idf/components/fatfs/vfs -I/home/kbuntu/ESP32/esp-idf/components/idf_test/include -I/home/kbuntu/ESP32/esp-idf/components/idf_test/include/esp32 -I/home/kbuntu/ESP32/esp-idf/components/ieee802154/include -I/home/kbuntu/ESP32/esp-idf/components/json/cJSON -I/home/kbuntu/ESP32/esp-idf/components/mqtt/esp-mqtt/include -I/home/kbuntu/ESP32/esp-idf/components/nvs_sec_provider/include -I/home/kbuntu/ESP32/esp-idf/components/perfmon/include -I/home/kbuntu/ESP32/esp-idf/components/spiffs/include -I/home/kbuntu/ESP32/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/kbuntu/ESP32/MAX4466_Driver=. -fmacro-prefix-map=/home/kbuntu/ESP32/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Source.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Source.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Source.c.obj -c /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c
+In file included from /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:12,
+                 from /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c:1:
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:38:6: error: #error "include FreeRTOS.h must appear in source files before include task.h"
+   38 |     #error "include FreeRTOS.h must appear in source files before include task.h"
+      |      ^~~~~
+In file included from /home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:41:
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:66:6: error: #error "FreeRTOS.h must be included before list.h"
+   66 |     #error "FreeRTOS.h must be included before list.h"
+      |      ^~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:151:25: error: unknown type name 'TickType_t'
+  151 |     configLIST_VOLATILE TickType_t xItemValue;          /*< The value being listed.  In most cases this is used to sort the list in ascending order. */
+      |                         ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:179:14: error: unknown type name 'UBaseType_t'
+  179 |     volatile UBaseType_t uxNumberOfItems;
+      |              ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h: In function 'vListInitialise':
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:47: error: expected declaration specifiers before 'PRIVILEGED_FUNCTION'
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:448:55: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  448 | void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:462:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  462 |                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:484:57: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  484 |                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:1: error: unknown type name 'UBaseType_t'
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:63: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:92:1: warning: empty declaration
+   92 | struct tskTaskControlBlock; /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+      | ^~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:93:38: error: storage class specified for parameter 'TaskHandle_t'
+   93 | typedef struct tskTaskControlBlock * TaskHandle_t;
+      |                                      ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:99:21: error: expected declaration specifiers or '...' before '*' token
+   99 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |                     ^
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:110:3: error: storage class specified for parameter 'eTaskState'
+  110 | } eTaskState;
+      |   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:120:3: error: storage class specified for parameter 'eNotifyAction'
+  120 | } eNotifyAction;
+      |   ^~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:129:5: error: unknown type name 'BaseType_t'
+  129 |     BaseType_t xOverflowCount;
+      |     ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:130:5: error: unknown type name 'TickType_t'
+  130 |     TickType_t xTimeOnEntering;
+      |     ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:131:3: error: storage class specified for parameter 'TimeOut_t'
+  131 | } TimeOut_t;
+      |   ^~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:141:3: error: storage class specified for parameter 'MemoryRegion_t'
+  141 | } MemoryRegion_t;
+      |   ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:148:5: error: unknown type name 'TaskFunction_t'
+  148 |     TaskFunction_t pvTaskCode;
+      |     ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:150:5: error: unknown type name 'configSTACK_DEPTH_TYPE'
+  150 |     configSTACK_DEPTH_TYPE usStackDepth;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:152:5: error: unknown type name 'UBaseType_t'
+  152 |     UBaseType_t uxPriority;
+      |     ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:153:5: error: unknown type name 'StackType_t'
+  153 |     StackType_t * puxStackBuffer;
+      |     ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:154:5: error: expected specifier-qualifier-list before 'MemoryRegion_t'
+  154 |     MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];
+      |     ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:158:3: error: storage class specified for parameter 'TaskParameters_t'
+  158 | } TaskParameters_t;
+      |   ^~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:166:5: error: expected specifier-qualifier-list before 'TaskHandle_t'
+  166 |     TaskHandle_t xHandle;                         /**< The handle of the task to which the rest of the information in the structure relates. */
+      |     ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:182:3: error: storage class specified for parameter 'TaskStatus_t'
+  182 | } TaskStatus_t;
+      |   ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:192:3: error: storage class specified for parameter 'eSleepModeStatus'
+  192 | } eSleepModeStatus;
+      |   ^~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:747:31: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  747 | void vTaskAllocateMPURegions( TaskHandle_t xTask,
+      |                               ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:748:37: error: type defaults to 'int' in declaration of 'MemoryRegion_t' [-Werror=implicit-int]
+  748 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:748:52: error: expected ';', ',' or ')' before '*' token
+  748 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                                    ^
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:786:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  786 | void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:835:24: error: unknown type name 'TickType_t'
+  835 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:835:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  835 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:897:1: error: unknown type name 'BaseType_t'
+  897 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:897:29: error: unknown type name 'TickType_t'
+  897 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      |                             ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:898:35: error: unknown type name 'TickType_t'
+  898 |                             const TickType_t xTimeIncrement ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:939:1: error: unknown type name 'BaseType_t'
+  939 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:939:29: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  939 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                             ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:983:1: error: unknown type name 'UBaseType_t'
+  983 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:983:38: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Werror=implicit-int]
+  983 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:983:51: error: expected ';', ',' or ')' before 'xTask'
+  983 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:989:1: error: unknown type name 'UBaseType_t'
+  989 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:989:45: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Werror=implicit-int]
+  989 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:989:58: error: expected ';', ',' or ')' before 'xTask'
+  989 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                          ^~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1005:1: error: expected declaration specifiers before 'eTaskState'
+ 1005 | eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1058:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1058 | void vTaskGetInfo( TaskHandle_t xTask,
+      |                    ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1059:20: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1059 |                    TaskStatus_t * pxTaskStatus,
+      |                    ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1060:20: error: unknown type name 'BaseType_t'
+ 1060 |                    BaseType_t xGetFreeStackSpace,
+      |                    ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1061:20: error: expected declaration specifiers or '...' before 'eTaskState'
+ 1061 |                    eTaskState eState ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1100:24: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1100 | void vTaskPrioritySet( TaskHandle_t xTask,
+      |                        ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1101:24: error: unknown type name 'UBaseType_t'
+ 1101 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1149:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1149 | void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1195:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1195 | void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1221:1: error: unknown type name 'BaseType_t'
+ 1221 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1221:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1221 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1253:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1253 | void vTaskStartScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1306:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1306 | void vTaskEndScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1356:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1356 | void vTaskSuspendAll( void ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1407:1: error: unknown type name 'BaseType_t'
+ 1407 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1407:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1407 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1419:1: error: unknown type name 'TickType_t'
+ 1419 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1419:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1419 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1432:1: error: unknown type name 'TickType_t'
+ 1432 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1432:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1432 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1443:1: error: unknown type name 'UBaseType_t'
+ 1443 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1443:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1443 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1453:23: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1453 | char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                       ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1466:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1466 | TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      | ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1514:1: error: unknown type name 'UBaseType_t'
+ 1514 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1514:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1514 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1539:1: error: unknown type name 'configSTACK_DEPTH_TYPE'
+ 1539 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1539:54: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1539 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1642:1: error: unknown type name 'BaseType_t'
+ 1642 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1642:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1642 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1652:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1652 | TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1751:1: error: unknown type name 'UBaseType_t'
+ 1751 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1751:35: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1751 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      |                                   ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1752:41: error: unknown type name 'UBaseType_t'
+ 1752 |                                   const UBaseType_t uxArraySize,
+      |                                         ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1753:35: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1753 |                                   configRUN_TIME_COUNTER_TYPE * const pulTotalRunTime ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1799:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1799 | void vTaskList( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1850:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1850 | void vTaskGetRunTimeStats( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:1: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1888:1: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1888 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1888:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1888 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1993:1: error: unknown type name 'BaseType_t'
+ 1993 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1993:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1993 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      |                                ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1994:32: error: unknown type name 'UBaseType_t'
+ 1994 |                                UBaseType_t uxIndexToNotify,
+      |                                ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1996:32: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 1996 |                                eNotifyAction eAction,
+      |                                ^~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2137:1: error: unknown type name 'BaseType_t'
+ 2137 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2137:39: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2137 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      |                                       ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2138:39: error: unknown type name 'UBaseType_t'
+ 2138 |                                       UBaseType_t uxIndexToNotify,
+      |                                       ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2140:39: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 2140 |                                       eNotifyAction eAction,
+      |                                       ^~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2142:39: error: unknown type name 'BaseType_t'
+ 2142 |                                       BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2272:1: error: unknown type name 'BaseType_t'
+ 2272 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2272:36: error: unknown type name 'UBaseType_t'
+ 2272 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      |                                    ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2276:36: error: unknown type name 'TickType_t'
+ 2276 |                                    TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2428:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2428 | void vTaskGenericNotifyGiveFromISR( TaskHandle_t xTaskToNotify,
+      |                                     ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2429:37: error: unknown type name 'UBaseType_t'
+ 2429 |                                     UBaseType_t uxIndexToNotify,
+      |                                     ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2430:37: error: unknown type name 'BaseType_t'
+ 2430 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2528:35: error: unknown type name 'UBaseType_t'
+ 2528 | uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+      |                                   ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2529:35: error: unknown type name 'BaseType_t'
+ 2529 |                                   BaseType_t xClearCountOnExit,
+      |                                   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2530:35: error: unknown type name 'TickType_t'
+ 2530 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2587:1: error: unknown type name 'BaseType_t'
+ 2587 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2587:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2587 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2588:42: error: unknown type name 'UBaseType_t'
+ 2588 |                                          UBaseType_t uxIndexToClear ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2645:41: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2645 | uint32_t ulTaskGenericNotifyValueClear( TaskHandle_t xTask,
+      |                                         ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2646:41: error: unknown type name 'UBaseType_t'
+ 2646 |                                         UBaseType_t uxIndexToClear,
+      |                                         ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2662:28: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2662 | void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                            ^~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2742:1: error: unknown type name 'BaseType_t'
+ 2742 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2742:34: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2742 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      |                                  ^~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2743:34: error: unknown type name 'TickType_t'
+ 2743 |                                  TickType_t * const pxTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2766:1: error: unknown type name 'BaseType_t'
+ 2766 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2766:31: error: unknown type name 'TickType_t'
+ 2766 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2793:1: error: unknown type name 'BaseType_t'
+ 2793 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2793:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2793 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2827:35: error: unknown type name 'TickType_t'
+ 2827 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2827:61: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2827 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2829:44: error: unknown type name 'TickType_t'
+ 2829 |                                      const TickType_t xItemValue,
+      |                                            ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2830:44: error: unknown type name 'TickType_t'
+ 2830 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2830:70: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2830 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2844:39: error: unknown type name 'TickType_t'
+ 2844 |                                       TickType_t xTicksToWait,
+      |                                       ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2845:45: error: unknown type name 'BaseType_t'
+ 2845 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2871:1: error: unknown type name 'BaseType_t'
+ 2871 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2871:73: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2871 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      |                                                                         ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2873:47: error: unknown type name 'TickType_t'
+ 2873 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2873:71: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2873 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2883:1: error: expected declaration specifiers before 'portDONT_DISCARD'
+ 2883 | portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2889:1: error: unknown type name 'TickType_t'
+ 2889 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2889:46: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2889 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      |                                              ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2894:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2894 | TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2900:31: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2900 | void vTaskMissedYield( void ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2906:1: error: unknown type name 'BaseType_t'
+ 2906 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2906:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2906 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2912:1: error: unknown type name 'BaseType_t'
+ 2912 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2912:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2912 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2918:1: error: unknown type name 'BaseType_t'
+ 2918 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2918:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2918 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2928:43: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2928 | void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder,
+      |                                           ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2929:43: error: unknown type name 'UBaseType_t'
+ 2929 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2934:1: error: unknown type name 'UBaseType_t'
+ 2934 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2934:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2934 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2940:26: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2940 | void vTaskSetTaskNumber( TaskHandle_t xTask,
+      |                          ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2941:32: error: unknown type name 'UBaseType_t'
+ 2941 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2951:21: error: unknown type name 'TickType_t'
+ 2951 | void vTaskStepTick( TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                     ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2967:1: error: expected declaration specifiers before 'eSleepModeStatus'
+ 2967 | eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2973:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2973 | TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2979:36: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2979 | void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:48:13: error: storage class specified for parameter 'time_to_sample_or_send'
+   48 | extern bool time_to_sample_or_send;
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:53:27: error: storage class specified for parameter 'periodic_timer'
+   53 | extern esp_timer_handle_t periodic_timer;
+      |                           ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:55:34: error: storage class specified for parameter 'adc_handle'
+   55 | extern adc_oneshot_unit_handle_t adc_handle;
+      |                                  ^~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:57:26: error: storage class specified for parameter 'adc_cali_handle'
+   57 | extern adc_cali_handle_t adc_cali_handle;
+      |                          ^~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:61:26: error: storage class specified for parameter 'tx_handle'
+   61 | extern i2s_chan_handle_t tx_handle;
+      |                          ^~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c:3:6: error: redefinition of parameter 'time_to_sample_or_send'
+    3 | bool time_to_sample_or_send;
+      |      ^~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:48:13: note: previous definition of 'time_to_sample_or_send' with type '_Bool'
+   48 | extern bool time_to_sample_or_send;
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c:7:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+    7 | void sample_from_signal(void){
+      |                              ^
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c:22:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   22 | void send_samples_as_signal(void){
+      |                                  ^
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:6: error: old-style parameter declarations in prototyped function definition
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |      ^~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c:34: error: expected '{' at end of input
+cc1: some warnings being treated as errors
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Demo.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Demo.c.obj 
+/home/kbuntu/.espressif/tools/xtensa-esp-elf/esp-13.2.0_20240530/xtensa-esp-elf/bin/xtensa-esp32-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v5.3\" -DMBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -DUNITY_INCLUDE_CONFIG_H -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/kbuntu/ESP32/MAX4466_Driver/build/config -I/home/kbuntu/ESP32/MAX4466_Driver/main -I/home/kbuntu/ESP32/esp-idf/components/newlib/platform_include -I/home/kbuntu/ESP32/esp-idf/components/freertos/config/include -I/home/kbuntu/ESP32/esp-idf/components/freertos/config/include/freertos -I/home/kbuntu/ESP32/esp-idf/components/freertos/config/xtensa/include -I/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/kbuntu/ESP32/esp-idf/components/freertos/esp_additions/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/include/soc -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/include/soc/esp32 -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/dma/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/ldo/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/port/esp32/. -I/home/kbuntu/ESP32/esp-idf/components/esp_hw_support/port/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/heap/include -I/home/kbuntu/ESP32/esp-idf/components/log/include -I/home/kbuntu/ESP32/esp-idf/components/soc/include -I/home/kbuntu/ESP32/esp-idf/components/soc/esp32 -I/home/kbuntu/ESP32/esp-idf/components/soc/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/hal/platform_port/include -I/home/kbuntu/ESP32/esp-idf/components/hal/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/hal/include -I/home/kbuntu/ESP32/esp-idf/components/esp_rom/include -I/home/kbuntu/ESP32/esp-idf/components/esp_rom/include/esp32 -I/home/kbuntu/ESP32/esp-idf/components/esp_rom/esp32 -I/home/kbuntu/ESP32/esp-idf/components/esp_common/include -I/home/kbuntu/ESP32/esp-idf/components/esp_system/include -I/home/kbuntu/ESP32/esp-idf/components/esp_system/port/soc -I/home/kbuntu/ESP32/esp-idf/components/esp_system/port/include/private -I/home/kbuntu/ESP32/esp-idf/components/xtensa/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/xtensa/include -I/home/kbuntu/ESP32/esp-idf/components/xtensa/deprecated_include -I/home/kbuntu/ESP32/esp-idf/components/lwip/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/include/apps -I/home/kbuntu/ESP32/esp-idf/components/lwip/include/apps/sntp -I/home/kbuntu/ESP32/esp-idf/components/lwip/lwip/src/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/freertos/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/esp32xx/include -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/kbuntu/ESP32/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_gpio/include -I/home/kbuntu/ESP32/esp-idf/components/esp_pm/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/port/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/library -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/esp_crt_bundle/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/3rdparty/everest/include -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m -I/home/kbuntu/ESP32/esp-idf/components/mbedtls/mbedtls/3rdparty/p256-m/p256-m -I/home/kbuntu/ESP32/esp-idf/components/esp_app_format/include -I/home/kbuntu/ESP32/esp-idf/components/esp_bootloader_format/include -I/home/kbuntu/ESP32/esp-idf/components/app_update/include -I/home/kbuntu/ESP32/esp-idf/components/bootloader_support/include -I/home/kbuntu/ESP32/esp-idf/components/bootloader_support/bootloader_flash/include -I/home/kbuntu/ESP32/esp-idf/components/esp_partition/include -I/home/kbuntu/ESP32/esp-idf/components/efuse/include -I/home/kbuntu/ESP32/esp-idf/components/efuse/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/esp_mm/include -I/home/kbuntu/ESP32/esp-idf/components/spi_flash/include -I/home/kbuntu/ESP32/esp-idf/components/pthread/include -I/home/kbuntu/ESP32/esp-idf/components/esp_timer/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_gptimer/include -I/home/kbuntu/ESP32/esp-idf/components/esp_ringbuf/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_uart/include -I/home/kbuntu/ESP32/esp-idf/components/vfs/include -I/home/kbuntu/ESP32/esp-idf/components/app_trace/include -I/home/kbuntu/ESP32/esp-idf/components/esp_event/include -I/home/kbuntu/ESP32/esp-idf/components/nvs_flash/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_pcnt/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_spi/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_mcpwm/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_ana_cmpr/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_i2s/include -I/home/kbuntu/ESP32/esp-idf/components/sdmmc/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_sdmmc/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_sdspi/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_sdio/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_dac/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_rmt/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_tsens/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_sdm/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_i2c/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_ledc/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_parlio/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_usb_serial_jtag/include -I/home/kbuntu/ESP32/esp-idf/components/driver/deprecated -I/home/kbuntu/ESP32/esp-idf/components/driver/i2c/include -I/home/kbuntu/ESP32/esp-idf/components/driver/touch_sensor/include -I/home/kbuntu/ESP32/esp-idf/components/driver/twai/include -I/home/kbuntu/ESP32/esp-idf/components/driver/touch_sensor/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/esp_phy/include -I/home/kbuntu/ESP32/esp-idf/components/esp_phy/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/esp_vfs_console/include -I/home/kbuntu/ESP32/esp-idf/components/esp_netif/include -I/home/kbuntu/ESP32/esp-idf/components/wpa_supplicant/include -I/home/kbuntu/ESP32/esp-idf/components/wpa_supplicant/port/include -I/home/kbuntu/ESP32/esp-idf/components/wpa_supplicant/esp_supplicant/include -I/home/kbuntu/ESP32/esp-idf/components/esp_coex/include -I/home/kbuntu/ESP32/esp-idf/components/esp_wifi/include -I/home/kbuntu/ESP32/esp-idf/components/esp_wifi/wifi_apps/include -I/home/kbuntu/ESP32/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/kbuntu/ESP32/esp-idf/components/esp_wifi/include/local -I/home/kbuntu/ESP32/esp-idf/components/unity/include -I/home/kbuntu/ESP32/esp-idf/components/unity/unity/src -I/home/kbuntu/ESP32/esp-idf/components/cmock/CMock/src -I/home/kbuntu/ESP32/esp-idf/components/console -I/home/kbuntu/ESP32/esp-idf/components/http_parser -I/home/kbuntu/ESP32/esp-idf/components/esp-tls -I/home/kbuntu/ESP32/esp-idf/components/esp-tls/esp-tls-crypto -I/home/kbuntu/ESP32/esp-idf/components/esp_adc/include -I/home/kbuntu/ESP32/esp-idf/components/esp_adc/interface -I/home/kbuntu/ESP32/esp-idf/components/esp_adc/esp32/include -I/home/kbuntu/ESP32/esp-idf/components/esp_adc/deprecated/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_isp/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_cam/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_cam/interface -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_jpeg/include -I/home/kbuntu/ESP32/esp-idf/components/esp_driver_ppa/include -I/home/kbuntu/ESP32/esp-idf/components/esp_eth/include -I/home/kbuntu/ESP32/esp-idf/components/esp_gdbstub/include -I/home/kbuntu/ESP32/esp-idf/components/esp_hid/include -I/home/kbuntu/ESP32/esp-idf/components/tcp_transport/include -I/home/kbuntu/ESP32/esp-idf/components/esp_http_client/include -I/home/kbuntu/ESP32/esp-idf/components/esp_http_server/include -I/home/kbuntu/ESP32/esp-idf/components/esp_https_ota/include -I/home/kbuntu/ESP32/esp-idf/components/esp_https_server/include -I/home/kbuntu/ESP32/esp-idf/components/esp_psram/include -I/home/kbuntu/ESP32/esp-idf/components/esp_lcd/include -I/home/kbuntu/ESP32/esp-idf/components/esp_lcd/interface -I/home/kbuntu/ESP32/esp-idf/components/protobuf-c/protobuf-c -I/home/kbuntu/ESP32/esp-idf/components/protocomm/include/common -I/home/kbuntu/ESP32/esp-idf/components/protocomm/include/security -I/home/kbuntu/ESP32/esp-idf/components/protocomm/include/transports -I/home/kbuntu/ESP32/esp-idf/components/protocomm/include/crypto/srp6a -I/home/kbuntu/ESP32/esp-idf/components/protocomm/proto-c -I/home/kbuntu/ESP32/esp-idf/components/esp_local_ctrl/include -I/home/kbuntu/ESP32/esp-idf/components/espcoredump/include -I/home/kbuntu/ESP32/esp-idf/components/espcoredump/include/port/xtensa -I/home/kbuntu/ESP32/esp-idf/components/wear_levelling/include -I/home/kbuntu/ESP32/esp-idf/components/fatfs/diskio -I/home/kbuntu/ESP32/esp-idf/components/fatfs/src -I/home/kbuntu/ESP32/esp-idf/components/fatfs/vfs -I/home/kbuntu/ESP32/esp-idf/components/idf_test/include -I/home/kbuntu/ESP32/esp-idf/components/idf_test/include/esp32 -I/home/kbuntu/ESP32/esp-idf/components/ieee802154/include -I/home/kbuntu/ESP32/esp-idf/components/json/cJSON -I/home/kbuntu/ESP32/esp-idf/components/mqtt/esp-mqtt/include -I/home/kbuntu/ESP32/esp-idf/components/nvs_sec_provider/include -I/home/kbuntu/ESP32/esp-idf/components/perfmon/include -I/home/kbuntu/ESP32/esp-idf/components/spiffs/include -I/home/kbuntu/ESP32/esp-idf/components/wifi_provisioning/include -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/kbuntu/ESP32/MAX4466_Driver=. -fmacro-prefix-map=/home/kbuntu/ESP32/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Demo.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Demo.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Demo.c.obj -c /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c
+In file included from /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:12,
+                 from /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:1:
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:38:6: error: #error "include FreeRTOS.h must appear in source files before include task.h"
+   38 |     #error "include FreeRTOS.h must appear in source files before include task.h"
+      |      ^~~~~
+In file included from /home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:41:
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:66:6: error: #error "FreeRTOS.h must be included before list.h"
+   66 |     #error "FreeRTOS.h must be included before list.h"
+      |      ^~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:151:25: error: unknown type name 'TickType_t'
+  151 |     configLIST_VOLATILE TickType_t xItemValue;          /*< The value being listed.  In most cases this is used to sort the list in ascending order. */
+      |                         ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:179:14: error: unknown type name 'UBaseType_t'
+  179 |     volatile UBaseType_t uxNumberOfItems;
+      |              ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h: In function 'vListInitialise':
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:47: error: expected declaration specifiers before 'PRIVILEGED_FUNCTION'
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:448:55: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  448 | void vListInitialiseItem( ListItem_t * const pxItem ) PRIVILEGED_FUNCTION;
+      |                                                       ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:462:54: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  462 |                   ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:484:57: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  484 |                      ListItem_t * const pxNewListItem ) PRIVILEGED_FUNCTION;
+      |                                                         ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:1: error: unknown type name 'UBaseType_t'
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:499:63: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  499 | UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove ) PRIVILEGED_FUNCTION;
+      |                                                               ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:92:1: warning: empty declaration
+   92 | struct tskTaskControlBlock; /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+      | ^~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:93:38: error: storage class specified for parameter 'TaskHandle_t'
+   93 | typedef struct tskTaskControlBlock * TaskHandle_t;
+      |                                      ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:99:21: error: expected declaration specifiers or '...' before '*' token
+   99 | typedef BaseType_t (* TaskHookFunction_t)( void * );
+      |                     ^
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:110:3: error: storage class specified for parameter 'eTaskState'
+  110 | } eTaskState;
+      |   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:120:3: error: storage class specified for parameter 'eNotifyAction'
+  120 | } eNotifyAction;
+      |   ^~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:129:5: error: unknown type name 'BaseType_t'
+  129 |     BaseType_t xOverflowCount;
+      |     ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:130:5: error: unknown type name 'TickType_t'
+  130 |     TickType_t xTimeOnEntering;
+      |     ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:131:3: error: storage class specified for parameter 'TimeOut_t'
+  131 | } TimeOut_t;
+      |   ^~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:141:3: error: storage class specified for parameter 'MemoryRegion_t'
+  141 | } MemoryRegion_t;
+      |   ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:148:5: error: unknown type name 'TaskFunction_t'
+  148 |     TaskFunction_t pvTaskCode;
+      |     ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:150:5: error: unknown type name 'configSTACK_DEPTH_TYPE'
+  150 |     configSTACK_DEPTH_TYPE usStackDepth;
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:152:5: error: unknown type name 'UBaseType_t'
+  152 |     UBaseType_t uxPriority;
+      |     ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:153:5: error: unknown type name 'StackType_t'
+  153 |     StackType_t * puxStackBuffer;
+      |     ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:154:5: error: expected specifier-qualifier-list before 'MemoryRegion_t'
+  154 |     MemoryRegion_t xRegions[ portNUM_CONFIGURABLE_REGIONS ];
+      |     ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:158:3: error: storage class specified for parameter 'TaskParameters_t'
+  158 | } TaskParameters_t;
+      |   ^~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:166:5: error: expected specifier-qualifier-list before 'TaskHandle_t'
+  166 |     TaskHandle_t xHandle;                         /**< The handle of the task to which the rest of the information in the structure relates. */
+      |     ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:182:3: error: storage class specified for parameter 'TaskStatus_t'
+  182 | } TaskStatus_t;
+      |   ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:192:3: error: storage class specified for parameter 'eSleepModeStatus'
+  192 | } eSleepModeStatus;
+      |   ^~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:747:31: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  747 | void vTaskAllocateMPURegions( TaskHandle_t xTask,
+      |                               ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:748:37: error: type defaults to 'int' in declaration of 'MemoryRegion_t' [-Werror=implicit-int]
+  748 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:748:52: error: expected ';', ',' or ')' before '*' token
+  748 |                               const MemoryRegion_t * const pxRegions ) PRIVILEGED_FUNCTION;
+      |                                                    ^
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:786:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  786 | void vTaskDelete( TaskHandle_t xTaskToDelete ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:835:24: error: unknown type name 'TickType_t'
+  835 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:835:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+  835 | void vTaskDelay( const TickType_t xTicksToDelay ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:897:1: error: unknown type name 'BaseType_t'
+  897 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:897:29: error: unknown type name 'TickType_t'
+  897 | BaseType_t xTaskDelayUntil( TickType_t * const pxPreviousWakeTime,
+      |                             ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:898:35: error: unknown type name 'TickType_t'
+  898 |                             const TickType_t xTimeIncrement ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:939:1: error: unknown type name 'BaseType_t'
+  939 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:939:29: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+  939 | BaseType_t xTaskAbortDelay( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                             ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:983:1: error: unknown type name 'UBaseType_t'
+  983 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:983:38: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Werror=implicit-int]
+  983 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:983:51: error: expected ';', ',' or ')' before 'xTask'
+  983 | UBaseType_t uxTaskPriorityGet( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                   ^~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:989:1: error: unknown type name 'UBaseType_t'
+  989 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:989:45: error: type defaults to 'int' in declaration of 'TaskHandle_t' [-Werror=implicit-int]
+  989 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:989:58: error: expected ';', ',' or ')' before 'xTask'
+  989 | UBaseType_t uxTaskPriorityGetFromISR( const TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                          ^~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1005:1: error: expected declaration specifiers before 'eTaskState'
+ 1005 | eTaskState eTaskGetState( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1058:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1058 | void vTaskGetInfo( TaskHandle_t xTask,
+      |                    ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1059:20: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1059 |                    TaskStatus_t * pxTaskStatus,
+      |                    ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1060:20: error: unknown type name 'BaseType_t'
+ 1060 |                    BaseType_t xGetFreeStackSpace,
+      |                    ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1061:20: error: expected declaration specifiers or '...' before 'eTaskState'
+ 1061 |                    eTaskState eState ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1100:24: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1100 | void vTaskPrioritySet( TaskHandle_t xTask,
+      |                        ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1101:24: error: unknown type name 'UBaseType_t'
+ 1101 |                        UBaseType_t uxNewPriority ) PRIVILEGED_FUNCTION;
+      |                        ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1149:20: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1149 | void vTaskSuspend( TaskHandle_t xTaskToSuspend ) PRIVILEGED_FUNCTION;
+      |                    ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1195:19: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1195 | void vTaskResume( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                   ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1221:1: error: unknown type name 'BaseType_t'
+ 1221 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1221:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1221 | BaseType_t xTaskResumeFromISR( TaskHandle_t xTaskToResume ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1253:34: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1253 | void vTaskStartScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1306:32: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1306 | void vTaskEndScheduler( void ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1356:30: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1356 | void vTaskSuspendAll( void ) PRIVILEGED_FUNCTION;
+      |                              ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1407:1: error: unknown type name 'BaseType_t'
+ 1407 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1407:35: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1407 | BaseType_t xTaskResumeAll( void ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1419:1: error: unknown type name 'TickType_t'
+ 1419 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1419:38: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1419 | TickType_t xTaskGetTickCount( void ) PRIVILEGED_FUNCTION;
+      |                                      ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1432:1: error: unknown type name 'TickType_t'
+ 1432 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1432:45: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1432 | TickType_t xTaskGetTickCountFromISR( void ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1443:1: error: unknown type name 'UBaseType_t'
+ 1443 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1443:44: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1443 | UBaseType_t uxTaskGetNumberOfTasks( void ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1453:23: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1453 | char * pcTaskGetName( TaskHandle_t xTaskToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                       ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1466:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1466 | TaskHandle_t xTaskGetHandle( const char * pcNameToQuery ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      | ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1514:1: error: unknown type name 'UBaseType_t'
+ 1514 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1514:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1514 | UBaseType_t uxTaskGetStackHighWaterMark( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1539:1: error: unknown type name 'configSTACK_DEPTH_TYPE'
+ 1539 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1539:54: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1539 | configSTACK_DEPTH_TYPE uxTaskGetStackHighWaterMark2( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                                      ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1642:1: error: unknown type name 'BaseType_t'
+ 1642 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1642:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1642 | BaseType_t xTaskCallApplicationTaskHook( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1652:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 1652 | TaskHandle_t xTaskGetIdleTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1751:1: error: unknown type name 'UBaseType_t'
+ 1751 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1751:35: error: expected declaration specifiers or '...' before 'TaskStatus_t'
+ 1751 | UBaseType_t uxTaskGetSystemState( TaskStatus_t * const pxTaskStatusArray,
+      |                                   ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1752:41: error: unknown type name 'UBaseType_t'
+ 1752 |                                   const UBaseType_t uxArraySize,
+      |                                         ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1753:35: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1753 |                                   configRUN_TIME_COUNTER_TYPE * const pulTotalRunTime ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1799:40: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1799 | void vTaskList( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                        ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1850:51: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1850 | void vTaskGetRunTimeStats( char * pcWriteBuffer ) PRIVILEGED_FUNCTION; /*lint !e971 Unqualified char types are allowed for strings and single characters only. */
+      |                                                   ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:1: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1887:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1887 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimeCounter( void ) PRIVILEGED_FUNCTION;
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1888:1: error: unknown type name 'configRUN_TIME_COUNTER_TYPE'
+ 1888 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1888:65: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 1888 | configRUN_TIME_COUNTER_TYPE ulTaskGetIdleRunTimePercent( void ) PRIVILEGED_FUNCTION;
+      |                                                                 ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1993:1: error: unknown type name 'BaseType_t'
+ 1993 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1993:32: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 1993 | BaseType_t xTaskGenericNotify( TaskHandle_t xTaskToNotify,
+      |                                ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1994:32: error: unknown type name 'UBaseType_t'
+ 1994 |                                UBaseType_t uxIndexToNotify,
+      |                                ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:1996:32: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 1996 |                                eNotifyAction eAction,
+      |                                ^~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2137:1: error: unknown type name 'BaseType_t'
+ 2137 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2137:39: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2137 | BaseType_t xTaskGenericNotifyFromISR( TaskHandle_t xTaskToNotify,
+      |                                       ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2138:39: error: unknown type name 'UBaseType_t'
+ 2138 |                                       UBaseType_t uxIndexToNotify,
+      |                                       ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2140:39: error: expected declaration specifiers or '...' before 'eNotifyAction'
+ 2140 |                                       eNotifyAction eAction,
+      |                                       ^~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2142:39: error: unknown type name 'BaseType_t'
+ 2142 |                                       BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2272:1: error: unknown type name 'BaseType_t'
+ 2272 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2272:36: error: unknown type name 'UBaseType_t'
+ 2272 | BaseType_t xTaskGenericNotifyWait( UBaseType_t uxIndexToWaitOn,
+      |                                    ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2276:36: error: unknown type name 'TickType_t'
+ 2276 |                                    TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2428:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2428 | void vTaskGenericNotifyGiveFromISR( TaskHandle_t xTaskToNotify,
+      |                                     ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2429:37: error: unknown type name 'UBaseType_t'
+ 2429 |                                     UBaseType_t uxIndexToNotify,
+      |                                     ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2430:37: error: unknown type name 'BaseType_t'
+ 2430 |                                     BaseType_t * pxHigherPriorityTaskWoken ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2528:35: error: unknown type name 'UBaseType_t'
+ 2528 | uint32_t ulTaskGenericNotifyTake( UBaseType_t uxIndexToWaitOn,
+      |                                   ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2529:35: error: unknown type name 'BaseType_t'
+ 2529 |                                   BaseType_t xClearCountOnExit,
+      |                                   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2530:35: error: unknown type name 'TickType_t'
+ 2530 |                                   TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2587:1: error: unknown type name 'BaseType_t'
+ 2587 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2587:42: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2587 | BaseType_t xTaskGenericNotifyStateClear( TaskHandle_t xTask,
+      |                                          ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2588:42: error: unknown type name 'UBaseType_t'
+ 2588 |                                          UBaseType_t uxIndexToClear ) PRIVILEGED_FUNCTION;
+      |                                          ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2645:41: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2645 | uint32_t ulTaskGenericNotifyValueClear( TaskHandle_t xTask,
+      |                                         ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2646:41: error: unknown type name 'UBaseType_t'
+ 2646 |                                         UBaseType_t uxIndexToClear,
+      |                                         ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2662:28: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2662 | void vTaskSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                            ^~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2742:1: error: unknown type name 'BaseType_t'
+ 2742 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2742:34: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2742 | BaseType_t xTaskCheckForTimeOut( TimeOut_t * const pxTimeOut,
+      |                                  ^~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2743:34: error: unknown type name 'TickType_t'
+ 2743 |                                  TickType_t * const pxTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2766:1: error: unknown type name 'BaseType_t'
+ 2766 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2766:31: error: unknown type name 'TickType_t'
+ 2766 | BaseType_t xTaskCatchUpTicks( TickType_t xTicksToCatchUp ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2793:1: error: unknown type name 'BaseType_t'
+ 2793 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2793:39: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2793 | BaseType_t xTaskIncrementTick( void ) PRIVILEGED_FUNCTION;
+      |                                       ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2827:35: error: unknown type name 'TickType_t'
+ 2827 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                   ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2827:61: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2827 |                             const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                             ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2829:44: error: unknown type name 'TickType_t'
+ 2829 |                                      const TickType_t xItemValue,
+      |                                            ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2830:44: error: unknown type name 'TickType_t'
+ 2830 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                            ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2830:70: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2830 |                                      const TickType_t xTicksToWait ) PRIVILEGED_FUNCTION;
+      |                                                                      ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2844:39: error: unknown type name 'TickType_t'
+ 2844 |                                       TickType_t xTicksToWait,
+      |                                       ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2845:45: error: unknown type name 'BaseType_t'
+ 2845 |                                       const BaseType_t xWaitIndefinitely ) PRIVILEGED_FUNCTION;
+      |                                             ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2871:1: error: unknown type name 'BaseType_t'
+ 2871 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2871:73: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2871 | BaseType_t xTaskRemoveFromEventList( const List_t * const pxEventList ) PRIVILEGED_FUNCTION;
+      |                                                                         ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2873:47: error: unknown type name 'TickType_t'
+ 2873 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                               ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2873:71: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2873 |                                         const TickType_t xItemValue ) PRIVILEGED_FUNCTION;
+      |                                                                       ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2883:1: error: expected declaration specifiers before 'portDONT_DISCARD'
+ 2883 | portDONT_DISCARD void vTaskSwitchContext( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2889:1: error: unknown type name 'TickType_t'
+ 2889 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2889:46: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2889 | TickType_t uxTaskResetEventItemValue( void ) PRIVILEGED_FUNCTION;
+      |                                              ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2894:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2894 | TaskHandle_t xTaskGetCurrentTaskHandle( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2900:31: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2900 | void vTaskMissedYield( void ) PRIVILEGED_FUNCTION;
+      |                               ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2906:1: error: unknown type name 'BaseType_t'
+ 2906 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2906:43: error: expected '=', ',', ';', 'asm' or '__attribute__' before 'PRIVILEGED_FUNCTION'
+ 2906 | BaseType_t xTaskGetSchedulerState( void ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2912:1: error: unknown type name 'BaseType_t'
+ 2912 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2912:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2912 | BaseType_t xTaskPriorityInherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2918:1: error: unknown type name 'BaseType_t'
+ 2918 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2918:37: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2918 | BaseType_t xTaskPriorityDisinherit( TaskHandle_t const pxMutexHolder ) PRIVILEGED_FUNCTION;
+      |                                     ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2928:43: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2928 | void vTaskPriorityDisinheritAfterTimeout( TaskHandle_t const pxMutexHolder,
+      |                                           ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2929:43: error: unknown type name 'UBaseType_t'
+ 2929 |                                           UBaseType_t uxHighestPriorityWaitingTask ) PRIVILEGED_FUNCTION;
+      |                                           ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2934:1: error: unknown type name 'UBaseType_t'
+ 2934 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2934:34: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2934 | UBaseType_t uxTaskGetTaskNumber( TaskHandle_t xTask ) PRIVILEGED_FUNCTION;
+      |                                  ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2940:26: error: expected declaration specifiers or '...' before 'TaskHandle_t'
+ 2940 | void vTaskSetTaskNumber( TaskHandle_t xTask,
+      |                          ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2941:32: error: unknown type name 'UBaseType_t'
+ 2941 |                          const UBaseType_t uxHandle ) PRIVILEGED_FUNCTION;
+      |                                ^~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2951:21: error: unknown type name 'TickType_t'
+ 2951 | void vTaskStepTick( TickType_t xTicksToJump ) PRIVILEGED_FUNCTION;
+      |                     ^~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2967:1: error: expected declaration specifiers before 'eSleepModeStatus'
+ 2967 | eSleepModeStatus eTaskConfirmSleepModeStatus( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2973:1: error: expected declaration specifiers before 'TaskHandle_t'
+ 2973 | TaskHandle_t pvTaskIncrementMutexHeldCount( void ) PRIVILEGED_FUNCTION;
+      | ^~~~~~~~~~~~
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:2979:36: error: expected declaration specifiers or '...' before 'TimeOut_t'
+ 2979 | void vTaskInternalSetTimeOutState( TimeOut_t * const pxTimeOut ) PRIVILEGED_FUNCTION;
+      |                                    ^~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:48:13: error: storage class specified for parameter 'time_to_sample_or_send'
+   48 | extern bool time_to_sample_or_send;
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:53:27: error: storage class specified for parameter 'periodic_timer'
+   53 | extern esp_timer_handle_t periodic_timer;
+      |                           ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:55:34: error: storage class specified for parameter 'adc_handle'
+   55 | extern adc_oneshot_unit_handle_t adc_handle;
+      |                                  ^~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:57:26: error: storage class specified for parameter 'adc_cali_handle'
+   57 | extern adc_cali_handle_t adc_cali_handle;
+      |                          ^~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:61:26: error: storage class specified for parameter 'tx_handle'
+   61 | extern i2s_chan_handle_t tx_handle;
+      |                          ^~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:3:27: error: redefinition of parameter 'adc_handle'
+    3 | adc_oneshot_unit_handle_t adc_handle;
+      |                           ^~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:55:34: note: previous definition of 'adc_handle' with type 'adc_oneshot_unit_handle_t' {aka 'struct adc_oneshot_unit_ctx_t *'}
+   55 | extern adc_oneshot_unit_handle_t adc_handle;
+      |                                  ^~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:4:19: error: redefinition of parameter 'adc_cali_handle'
+    4 | adc_cali_handle_t adc_cali_handle;
+      |                   ^~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:57:26: note: previous definition of 'adc_cali_handle' with type 'adc_cali_handle_t' {aka 'struct adc_cali_scheme_t *'}
+   57 | extern adc_cali_handle_t adc_cali_handle;
+      |                          ^~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:5:20: error: redefinition of parameter 'periodic_timer'
+    5 | esp_timer_handle_t periodic_timer;
+      |                    ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:53:27: note: previous definition of 'periodic_timer' with type 'esp_timer_handle_t' {aka 'struct esp_timer *'}
+   53 | extern esp_timer_handle_t periodic_timer;
+      |                           ^~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:8:19: error: redefinition of parameter 'tx_handle'
+    8 | i2s_chan_handle_t tx_handle;
+      |                   ^~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:61:26: note: previous definition of 'tx_handle' with type 'i2s_chan_handle_t' {aka 'struct i2s_channel_obj_t *'}
+   61 | extern i2s_chan_handle_t tx_handle;
+      |                          ^~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:11:13: error: storage class specified for parameter 'init_timer'
+   11 | static void init_timer(void);
+      |             ^~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:12:13: error: storage class specified for parameter 'init_adc'
+   12 | static void init_adc(void);
+      |             ^~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:14:13: error: storage class specified for parameter 'init_i2s'
+   14 | static void init_i2s(void);
+      |             ^~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:16:20: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   16 | void app_main(void){
+      |                    ^
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:32:27: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   32 | static void init_adc(void){
+      |                           ^
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:59:47: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   59 | static void periodic_timer_callback(void* arg){
+      |                                               ^
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:65:29: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+   65 | static void init_timer(void){
+      |                             ^
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:114:27: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+  114 | static void init_i2s(void){
+      |                           ^
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/list.h:437:6: error: old-style parameter declarations in prototyped function definition
+  437 | void vListInitialise( List_t * const pxList ) PRIVILEGED_FUNCTION;
+      |      ^~~~~~~~~~~~~~~
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:141: error: expected '{' at end of input
+cc1: some warnings being treated as errors
+ninja: build stopped: subcommand failed.

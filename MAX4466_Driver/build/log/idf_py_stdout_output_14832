@@ -1,0 +1,48 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/kbuntu/ESP32/MAX4466_Driver/build/bootloader/esp-idf/esptool_py && /home/kbuntu/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/kbuntu/ESP32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/kbuntu/ESP32/MAX4466_Driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Source.c.obj
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Demo.c.obj
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c: In function 'app_main':
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:26:17: warning: passing argument 1 of 'xTaskCreate' from incompatible pointer type [-Wincompatible-pointer-types]
+   26 |     xTaskCreate(send_samples_as_signal, "Send Signal", 4096, NULL, 5, NULL);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+      |                 |
+      |                 void (*)(void)
+In file included from /home/kbuntu/ESP32/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:12,
+                 from /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Demo.c:1:
+/home/kbuntu/ESP32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:371:44: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(void)'
+  371 |     BaseType_t xTaskCreate( TaskFunction_t pxTaskCode,
+      |                             ~~~~~~~~~~~~~~~^~~~~~~~~~
+[4/9] Linking C static library esp-idf/main/libmain.a
+[5/9] Generating ld/sections.ld
+[6/9] Linking CXX executable MAX4466_Driver.elf
+[7/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/kbuntu/ESP32/MAX4466_Driver/build/MAX4466_Driver.bin
+[8/9] cd /home/kbuntu/ESP32/MAX4466_Driver/build/esp-idf/esptool_py && /home/kbuntu/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/kbuntu/ESP32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/kbuntu/ESP32/MAX4466_Driver/build/partition_table/partition-table.bin /home/kbuntu/ESP32/MAX4466_Driver/build/MAX4466_Driver.bin
+MAX4466_Driver.bin binary size 0x33f40 bytes. Smallest app partition is 0x100000 bytes. 0xcc0c0 bytes (80%) free.
+[8/9] cd /home/kbuntu/ESP32/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/kbuntu/ESP32/esp-idf -D "SERIAL_TOOL=/home/kbuntu/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/kbuntu/ESP32/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/kbuntu/ESP32/MAX4466_Driver/build -P /home/kbuntu/ESP32/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 MAX4466_Driver.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: e8:6b:ea:cf:ca:3c
+Uploading stub...
+Running stub...
+Stub running...
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00043fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16351...
+Writing at 0x00001000... (100 %)

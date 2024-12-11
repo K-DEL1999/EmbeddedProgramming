@@ -1,0 +1,802 @@
+gment 3: paddr=0001c984 vaddr=40080000 size=03694h ( 13972) load[0m
+[0;32mI (139) esp_image: segme�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov 22 2024 19:36:13[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v3.1[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0a5d4h ( 42452) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001a5fc vaddr=3ff80000 size=00004h (     4) load[0m
+[0;32mI (119) esp_image: segment 2: paddr=0001a608 vaddr=3ffb0000 size=02374h (  9076) load[0m
+[0;32mI (128) esp_image: segment 3: paddr=0001c984 vaddr=40080000 size=03694h ( 13972) load[0m
+[0;32mI (139) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=16290h ( 90768) map[0m
+[0;32mI (173) esp_image: segment 5: paddr=000362b8 vaddr=40083694 size=098b0h ( 39088) load[0m
+[0;32mI (195) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (195) boot: Disabling RNG early entropy source...[0m
+[0;32mI (206) cpu_start: Multicore app[0m
+[0;32mI (215) cpu_start: Pro cpu start user code[0m
+[0;32mI (215) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (215) app_init: Application information:[0m
+[0;32mI (218) app_init: Project name:     MAX4466_Driver[0m
+[0;32mI (223) app_init: App version:      1[0m
+[0;32mI (228) app_init: Compile time:     Nov 22 2024 19:36:08[0m
+[0;32mI (234) app_init: ELF file SHA256:  3fe85434d...[0m
+[0;32mI (239) app_init: ESP-IDF:          v5.3[0m
+[0;32mI (244) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (248) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (253) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (259) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (266) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (272) heap_init: At 3FFB2C88 len 0002D378 (180 KiB): DRAM[0m
+[0;32mI (278) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (284) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (291) heap_init: At 4008CF44 len 000130BC (76 KiB): IRAM[0m
+[0;32mI (298) spi_flash: detected chip: generic[0m
+[0;32mI (301) spi_flash: flash io: dio[0m
+[0;33mW (305) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (319) main_task: Started on CPU0[0m
+[0;32mI (329) main_task: Calling app_main()[0m
+[0;32mI (329) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (329) gpio: GPIO[25]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (339) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (349) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (359) gpio: GPIO[32]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (369) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+raw_value: 2559, mV: 2309
+raw_value: 2763, mV: 2481
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2801, mV: 2513
+raw_value: 2802, mV: 2514
+raw_value: 2807, mV: 2519
+raw_value: 2801, mV: 2513
+raw_value: 2812, mV: 2523
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2801, mV: 2513
+raw_value: 2801, mV: 2513
+raw_value: 2803, mV: 2515
+raw_value: 2803, mV: 2515
+raw_value: 2807, mV: 2519
+raw_value: 2803, mV: 2515
+raw_value: 2801, mV: 2513
+raw_value: 2803, mV: 2515
+[0;31mE (5329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (5329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (5329) task_wdt: Tasks currently running:[0m
+[0;31mE (5329) task_wdt: CPU 0: main[0m
+[0;31mE (5329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (5329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 2804, mV: 2516
+raw_value: 2805, mV: 2517
+raw_value: 2815, mV: 2525
+raw_value: 2819, mV: 2529
+raw_value: 2807, mV: 2519
+raw_value: 2806, mV: 2518
+raw_value: 2801, mV: 2513
+raw_value: 2803, mV: 2515
+raw_value: 2807, mV: 2519
+raw_value: 2805, mV: 2517
+raw_value: 2805, mV: 2517
+raw_value: 2803, mV: 2515
+raw_value: 2805, mV: 2517
+raw_value: 2807, mV: 2519
+raw_value: 2803, mV: 2515
+raw_value: 2800, mV: 2513
+raw_value: 2801, mV: 2513
+raw_value: 2811, mV: 2522
+raw_value: 2799, mV: 2512
+raw_value: 2798, mV: 2511
+[0;31mE (10329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (10329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (10329) task_wdt: Tasks currently running:[0m
+[0;31mE (10329) task_wdt: CPU 0: main[0m
+[0;31mE (10329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (10329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 2799, mV: 2512
+raw_value: 2801, mV: 2513
+raw_value: 2799, mV: 2512
+raw_value: 2799, mV: 2512
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2808, mV: 2519
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2802, mV: 2514
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2802, mV: 2514
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2802, mV: 2514
+[0;31mE (15329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (15329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (15329) task_wdt: Tasks currently running:[0m
+[0;31mE (15329) task_wdt: CPU 0: main[0m
+[0;31mE (15329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (15329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2812, mV: 2523
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2806, mV: 2518
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2801, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2801, mV: 2513
+raw_value: 2801, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2800, mV: 2513
+raw_value: 2804, mV: 2516
+[0;31mE (20329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (20329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (20329) task_wdt: Tasks currently running:[0m
+[0;31mE (20329) task_wdt: CPU 0: main[0m
+[0;31mE (20329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (20329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 2798, mV: 2511
+raw_value: 2800, mV: 2513
+raw_value: 2791, mV: 2505
+raw_value: 2787, mV: 2502
+raw_value: 2791, mV: 2505
+raw_value: 2789, mV: 2503
+raw_value: 2800, mV: 2513
+raw_value: 2789, mV: 2503
+raw_value: 2790, mV: 2504
+raw_value: 2800, mV: 2513
+raw_value: 2789, mV: 2503
+raw_value: 2800, mV: 2513
+raw_value: 2794, mV: 2508
+raw_value: 2795, mV: 2508
+raw_value: 2799, mV: 2512
+raw_value: 2770, mV: 2487
+raw_value: 2758, mV: 2477
+raw_value: 2695, mV: 2424
+raw_value: 2605, mV: 2348
+raw_value: 2539, mV: 2292
+[0;31mE (25329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (25329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (25329) task_wdt: Tasks currently running:[0m
+[0;31mE (25329) task_wdt: CPU 0: main[0m
+[0;31mE (25329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (25329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 2453, mV: 2219
+raw_value: 2426, mV: 2196
+raw_value: 2439, mV: 2207
+raw_value: 2440, mV: 2208
+raw_value: 2433, mV: 2202
+raw_value: 2332, mV: 2116
+raw_value: 2256, mV: 2052
+raw_value: 2271, mV: 2065
+raw_value: 2283, mV: 2075
+raw_value: 2304, mV: 2093
+raw_value: 2465, mV: 2229
+raw_value: 2501, mV: 2259
+raw_value: 2496, mV: 2255
+raw_value: 2995, mV: 2650
+raw_value: 2992, mV: 2648
+raw_value: 3285, mV: 2816
+raw_value: 3600, mV: 2967
+raw_value: 3583, mV: 2959
+raw_value: 3961, mV: 3122
+raw_value: 3906, mV: 3099
+[0;31mE (30329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (30329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (30329) task_wdt: Tasks currently running:[0m
+[0;31mE (30329) task_wdt: CPU 0: main[0m
+[0;31mE (30329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (30329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 3914, mV: 3103
+raw_value: 3905, mV: 3099
+raw_value: 3905, mV: 3099
+raw_value: 3903, mV: 3098
+raw_value: 3921, mV: 3105
+raw_value: 3963, mV: 3123
+raw_value: 3933, mV: 3110
+raw_value: 3977, mV: 3128
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4095, mV: 3176
+raw_value: 4018, mV: 3145
+[0;31mE (35329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (35329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (35329) task_wdt: Tasks currently running:[0m
+[0;31mE (35329) task_wdt: CPU 0: main[0m
+[0;31mE (35329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (35329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 4025, mV: 3147
+raw_value: 3534, mV: 2938
+raw_value: 3120, mV: 2725
+raw_value: 3142, mV: 2738
+raw_value: 2981, mV: 2641
+raw_value: 2704, mV: 2431
+raw_value: 2656, mV: 2391
+raw_value: 2479, mV: 2241
+raw_value: 2181, mV: 1989
+raw_value: 2198, mV: 2003
+raw_value: 2070, mV: 1895
+raw_value: 1635, mV: 1526
+raw_value: 1559, mV: 1462
+raw_value: 1415, mV: 1340
+raw_value: 1006, mV: 994
+raw_value: 898, mV: 902
+raw_value: 621, mV: 668
+raw_value: 241, mV: 346
+raw_value: 265, mV: 366
+raw_value: 183, mV: 297
+[0;31mE (40329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (40329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (40329) task_wdt: Tasks currently running:[0m
+[0;31mE (40329) task_wdt: CPU 0: main[0m
+[0;31mE (40329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (40329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 163, mV: 280
+raw_value: 183, mV: 297
+raw_value: 192, mV: 305
+raw_value: 204, mV: 315
+raw_value: 218, mV: 327
+raw_value: 432, mV: 508
+raw_value: 568, mV: 623
+raw_value: 569, mV: 624
+raw_value: 578, mV: 631
+raw_value: 693, mV: 729
+raw_value: 1023, mV: 1008
+raw_value: 1001, mV: 989
+raw_value: 997, mV: 986
+raw_value: 1023, mV: 1008
+raw_value: 1210, mV: 1166
+raw_value: 1193, mV: 1152
+raw_value: 1193, mV: 1152
+raw_value: 1226, mV: 1180
+raw_value: 1474, mV: 1390
+raw_value: 1617, mV: 1511
+[0;31mE (45329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (45329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (45329) task_wdt: Tasks currently running:[0m
+[0;31mE (45329) task_wdt: CPU 0: main[0m
+[0;31mE (45329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (45329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1641, mV: 1531
+raw_value: 1711, mV: 1591
+raw_value: 1703, mV: 1584
+raw_value: 1856, mV: 1713
+raw_value: 1936, mV: 1781
+raw_value: 1949, mV: 1792
+raw_value: 2010, mV: 1844
+raw_value: 2119, mV: 1936
+raw_value: 2112, mV: 1930
+raw_value: 2142, mV: 1956
+raw_value: 2320, mV: 2106
+raw_value: 2357, mV: 2138
+raw_value: 2363, mV: 2143
+raw_value: 2516, mV: 2272
+raw_value: 2768, mV: 2486
+raw_value: 2743, mV: 2464
+raw_value: 2880, mV: 2580
+raw_value: 3263, mV: 2804
+raw_value: 3223, mV: 2783
+raw_value: 3264, mV: 2805
+[0;31mE (50329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (50329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (50329) task_wdt: Tasks currently running:[0m
+[0;31mE (50329) task_wdt: CPU 0: main[0m
+[0;31mE (50329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (50329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 3642, mV: 2985
+raw_value: 3644, mV: 2986
+raw_value: 3643, mV: 2986
+raw_value: 3641, mV: 2985
+raw_value: 3619, mV: 2975
+raw_value: 3553, mV: 2946
+raw_value: 3131, mV: 2732
+raw_value: 2883, mV: 2583
+raw_value: 2853, mV: 2557
+raw_value: 2499, mV: 2258
+raw_value: 2310, mV: 2098
+raw_value: 2301, mV: 2090
+raw_value: 1936, mV: 1781
+raw_value: 1889, mV: 1741
+raw_value: 1648, mV: 1537
+raw_value: 1378, mV: 1309
+raw_value: 1394, mV: 1322
+raw_value: 1077, mV: 1054
+raw_value: 849, mV: 861
+raw_value: 765, mV: 790
+[0;31mE (55329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (55329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (55329) task_wdt: Tasks currently running:[0m
+[0;31mE (55329) task_wdt: CPU 0: main[0m
+[0;31mE (55329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (55329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 433, mV: 509
+raw_value: 147, mV: 266
+raw_value: 171, mV: 287
+raw_value: 151, mV: 270
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+[0;31mE (60329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (60329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (60329) task_wdt: Tasks currently running:[0m
+[0;31mE (60329) task_wdt: CPU 0: main[0m
+[0;31mE (60329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (60329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 193, mV: 305
+raw_value: 162, mV: 279
+raw_value: 176, mV: 291
+raw_value: 386, mV: 469
+raw_value: 423, mV: 500
+raw_value: 416, mV: 494
+raw_value: 420, mV: 498
+raw_value: 426, mV: 503
+raw_value: 415, mV: 493
+raw_value: 423, mV: 500
+raw_value: 418, mV: 496
+raw_value: 417, mV: 495
+raw_value: 417, mV: 495
+raw_value: 417, mV: 495
+raw_value: 426, mV: 503
+raw_value: 426, mV: 503
+raw_value: 417, mV: 495
+raw_value: 422, mV: 499
+raw_value: 418, mV: 496
+raw_value: 416, mV: 494
+[0;31mE (65329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (65329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (65329) task_wdt: Tasks currently running:[0m
+[0;31mE (65329) task_wdt: CPU 0: main[0m
+[0;31mE (65329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (65329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 418, mV: 496
+raw_value: 420, mV: 498
+raw_value: 426, mV: 503
+raw_value: 432, mV: 508
+raw_value: 434, mV: 509
+raw_value: 432, mV: 508
+raw_value: 441, mV: 515
+raw_value: 446, mV: 520
+raw_value: 501, mV: 566
+raw_value: 434, mV: 509
+raw_value: 432, mV: 508
+raw_value: 502, mV: 567
+raw_value: 421, mV: 498
+raw_value: 421, mV: 498
+raw_value: 422, mV: 499
+raw_value: 421, mV: 498
+raw_value: 327, mV: 419
+raw_value: 336, mV: 426
+raw_value: 304, mV: 399
+raw_value: 67, mV: 199
+[0;31mE (70329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (70329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (70329) task_wdt: Tasks currently running:[0m
+[0;31mE (70329) task_wdt: CPU 0: main[0m
+[0;31mE (70329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (70329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 0, mV: 142
+raw_value: 53, mV: 187
+raw_value: 57, mV: 190
+raw_value: 560, mV: 616
+raw_value: 530, mV: 591
+raw_value: 726, mV: 757
+raw_value: 1424, mV: 1348
+raw_value: 1488, mV: 1402
+[0;31mE (75329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (75329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (75329) task_wdt: Tasks currently running:[0m
+[0;31mE (75329) task_wdt: CPU 0: main[0m
+[0;31mE (75329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (75329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1453, mV: 1372
+raw_value: 1488, mV: 1402
+raw_value: 1434, mV: 1356
+raw_value: 1427, mV: 1350
+raw_value: 1493, mV: 1406
+raw_value: 1472, mV: 1388
+raw_value: 1459, mV: 1377
+raw_value: 1460, mV: 1378
+raw_value: 1472, mV: 1388
+raw_value: 1456, mV: 1375
+raw_value: 1447, mV: 1367
+raw_value: 1454, mV: 1373
+raw_value: 1451, mV: 1370
+raw_value: 1453, mV: 1372
+raw_value: 1443, mV: 1364
+raw_value: 1446, mV: 1366
+raw_value: 1471, mV: 1387
+raw_value: 1461, mV: 1379
+raw_value: 1472, mV: 1388
+raw_value: 1482, mV: 1397
+[0;31mE (80329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (80329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (80329) task_wdt: Tasks currently running:[0m
+[0;31mE (80329) task_wdt: CPU 0: main[0m
+[0;31mE (80329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (80329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1446, mV: 1366
+raw_value: 1447, mV: 1367
+raw_value: 1450, mV: 1370
+raw_value: 1465, mV: 1382
+raw_value: 1456, mV: 1375
+raw_value: 1462, mV: 1380
+raw_value: 1459, mV: 1377
+raw_value: 1459, mV: 1377
+raw_value: 1475, mV: 1391
+raw_value: 1484, mV: 1398
+raw_value: 1488, mV: 1402
+raw_value: 1494, mV: 1407
+raw_value: 1498, mV: 1410
+raw_value: 1487, mV: 1401
+raw_value: 1490, mV: 1404
+raw_value: 1496, mV: 1409
+raw_value: 1504, mV: 1415
+raw_value: 1511, mV: 1421
+raw_value: 1503, mV: 1415
+raw_value: 1642, mV: 1532
+[0;31mE (85329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (85329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (85329) task_wdt: Tasks currently running:[0m
+[0;31mE (85329) task_wdt: CPU 0: main[0m
+[0;31mE (85329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (85329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1535, mV: 1442
+raw_value: 1406, mV: 1332
+raw_value: 1499, mV: 1411
+raw_value: 1458, mV: 1376
+raw_value: 1437, mV: 1359
+raw_value: 1426, mV: 1349
+raw_value: 1393, mV: 1321
+raw_value: 1363, mV: 1296
+raw_value: 1293, mV: 1237
+raw_value: 1314, mV: 1254
+raw_value: 1455, mV: 1374
+raw_value: 1459, mV: 1377
+raw_value: 1427, mV: 1350
+raw_value: 1335, mV: 1272
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1231, mV: 1184
+raw_value: 1238, mV: 1190
+raw_value: 1232, mV: 1185
+raw_value: 1243, mV: 1194
+[0;31mE (90329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (90329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (90329) task_wdt: Tasks currently running:[0m
+[0;31mE (90329) task_wdt: CPU 0: main[0m
+[0;31mE (90329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (90329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1231, mV: 1184
+raw_value: 1230, mV: 1183
+raw_value: 1240, mV: 1192
+raw_value: 1230, mV: 1183
+raw_value: 1231, mV: 1184
+raw_value: 1231, mV: 1184
+raw_value: 1230, mV: 1183
+raw_value: 1237, mV: 1189
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1231, mV: 1184
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1231, mV: 1184
+raw_value: 1231, mV: 1184
+raw_value: 1229, mV: 1183
+raw_value: 1230, mV: 1183
+[0;31mE (95329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (95329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (95329) task_wdt: Tasks currently running:[0m
+[0;31mE (95329) task_wdt: CPU 0: main[0m
+[0;31mE (95329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (95329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1231, mV: 1184
+raw_value: 1232, mV: 1185
+raw_value: 1231, mV: 1184
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1231, mV: 1184
+raw_value: 1230, mV: 1183
+raw_value: 1232, mV: 1185
+raw_value: 1230, mV: 1183
+raw_value: 1233, mV: 1186
+raw_value: 1237, mV: 1189
+raw_value: 1230, mV: 1183
+raw_value: 1229, mV: 1183
+raw_value: 1230, mV: 1183
+raw_value: 1227, mV: 1181
+raw_value: 1227, mV: 1181
+raw_value: 1231, mV: 1184
+raw_value: 1227, mV: 1181
+raw_value: 1228, mV: 1182
+raw_value: 1231, mV: 1184
+[0;31mE (100329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (100329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (100329) task_wdt: Tasks currently running:[0m
+[0;31mE (100329) task_wdt: CPU 0: main[0m
+[0;31mE (100329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (100329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1231, mV: 1184
+raw_value: 1231, mV: 1184
+raw_value: 1230, mV: 1183
+raw_value: 1229, mV: 1183
+raw_value: 1229, mV: 1183
+raw_value: 1228, mV: 1182
+raw_value: 1232, mV: 1185
+raw_value: 1229, mV: 1183
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1238, mV: 1190
+raw_value: 1237, mV: 1189
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1234, mV: 1187
+raw_value: 1242, mV: 1194
+raw_value: 1242, mV: 1194
+[0;31mE (105329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (105329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (105329) task_wdt: Tasks currently running:[0m
+[0;31mE (105329) task_wdt: CPU 0: main[0m
+[0;31mE (105329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (105329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1456, mV: 1375
+raw_value: 1362, mV: 1295
+raw_value: 1239, mV: 1191
+raw_value: 1235, mV: 1188
+raw_value: 1232, mV: 1185
+raw_value: 1232, mV: 1185
+raw_value: 1234, mV: 1187
+raw_value: 1237, mV: 1189
+raw_value: 1237, mV: 1189
+raw_value: 1235, mV: 1188
+raw_value: 1246, mV: 1197
+raw_value: 1246, mV: 1197
+raw_value: 1291, mV: 1235
+raw_value: 1297, mV: 1240
+raw_value: 1337, mV: 1274
+raw_value: 1299, mV: 1242
+raw_value: 1302, mV: 1244
+raw_value: 1311, mV: 1252
+raw_value: 1281, mV: 1227
+raw_value: 1278, mV: 1224
+[0;31mE (110329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (110329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (110329) task_wdt: Tasks currently running:[0m
+[0;31mE (110329) task_wdt: CPU 0: main[0m
+[0;31mE (110329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (110329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1280, mV: 1226
+raw_value: 1277, mV: 1223
+raw_value: 1275, mV: 1221
+raw_value: 1275, mV: 1221
+raw_value: 1280, mV: 1226
+raw_value: 1271, mV: 1218
+raw_value: 1278, mV: 1224
+raw_value: 1281, mV: 1227
+raw_value: 1291, mV: 1235
+raw_value: 1280, mV: 1226
+raw_value: 1285, mV: 1230
+raw_value: 1283, mV: 1228
+raw_value: 1297, mV: 1240
+raw_value: 1296, mV: 1239
+raw_value: 1293, mV: 1237
+raw_value: 1280, mV: 1226
+raw_value: 1285, mV: 1230
+raw_value: 1291, mV: 1235
+raw_value: 1277, mV: 1223
+raw_value: 1293, mV: 1237
+[0;31mE (115329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (115329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (115329) task_wdt: Tasks currently running:[0m
+[0;31mE (115329) task_wdt: CPU 0: main[0m
+[0;31mE (115329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (115329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1293, mV: 1237
+raw_value: 1271, mV: 1218
+raw_value: 1273, mV: 1220
+raw_value: 1274, mV: 1221
+raw_value: 1279, mV: 1225
+raw_value: 1276, mV: 1222
+raw_value: 1281, mV: 1227
+raw_value: 1284, mV: 1229
+raw_value: 1285, mV: 1230
+raw_value: 1314, mV: 1254
+raw_value: 1328, mV: 1266
+raw_value: 1328, mV: 1266
+raw_value: 1323, mV: 1262
+raw_value: 1303, mV: 1245
+raw_value: 1301, mV: 1243
+raw_value: 1314, mV: 1254
+raw_value: 1310, mV: 1251
+raw_value: 1311, mV: 1252
+raw_value: 1315, mV: 1255
+raw_value: 1303, mV: 1245
+[0;31mE (120329) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (120329) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (120329) task_wdt: Tasks currently running:[0m
+[0;31mE (120329) task_wdt: CPU 0: main[0m
+[0;31mE (120329) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (120329) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400D81A3:0x3FFB0F90 0x400D8568:0x3FFB0FB0 0x40083049:0x3FFB0FE0 0x400D624D:0x3FFB4F40 0x400D6190:0x3FFB4F60 0x400E5A48:0x3FFB4F80 0x40086321:0x3FFB4FB0
+
+raw_value: 1317, mV: 1257
+raw_value: 1343, mV: 1279
+raw_value: 1363, mV: 1296
+raw_value: 1359, mV: 1293
+raw_value: 1360, mV: 1293
+raw_value: 1363, mV: 1296
+raw_value: 1343, mV: 1279
+raw_value: 1338, mV: 1275
+raw_value: 1397, mV: 1325
+raw_value: 1423, mV: 1347
+raw_value: 1409, mV: 1335
+raw_value: 1406, mV: 1332
+raw_value: 1403, mV: 1330
+raw_value: 1405, mV: 1332
+raw_value: 1401, mV: 1328
+raw_value: 1398, mV: 1326
+raw_value: 1396, mV: 1324
+raw_value: 1349, mV: 1284

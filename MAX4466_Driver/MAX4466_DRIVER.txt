@@ -1,0 +1,13 @@
+This project was a fun introduction to audio input. The datasheets have become more
+graph focused which is intimidating at first but after a while you get used to it. This 
+was my first project dealing with an ADC and Sampling. I have been reading alot about 
+DSP but plan on incorporating that in the next project. This project wasnt meant to 
+employ any of the ideas the DSP book discusses. Instead it was meant to break the ice 
+when it comes to stepping into the signals world. Again, it was a very fun and cool project.
+Setting thresholds that activated LEDs based on the digitized voltage was satisfying to see.
+Possible improvements would be to find a better way to sample instead of just waiting a set
+amount of time and then taking a sample. I guess maybe take the average of samples over a 
+period of time ? 
+
+This was also my first time soldering. Long story short, it was awesome. Great work, keep going.
+Im proud of you. 

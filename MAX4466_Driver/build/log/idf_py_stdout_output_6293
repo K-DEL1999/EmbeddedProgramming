@@ -1,0 +1,31 @@
+[1/11] Performing build step for 'bootloader'
+[1/1] cd /home/kbuntu/ESP32/MAX4466_Driver/build/bootloader/esp-idf/esptool_py && /home/kbuntu/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/kbuntu/ESP32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/kbuntu/ESP32/MAX4466_Driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Source.c.obj
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c: In function 'sample_from_signal':
+/home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c:11:51: warning: passing argument 3 of 'adc_oneshot_read' from incompatible pointer type [-Wincompatible-pointer-types]
+   11 |         adc_oneshot_read(adc_handle, ADC_CHANNEL, &samples[i]);
+      |                                                   ^~~~~~~~~~~
+      |                                                   |
+      |                                                   uint16_t * {aka short unsigned int *}
+In file included from /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Header.h:5,
+                 from /home/kbuntu/ESP32/MAX4466_Driver/main/MAX4466_Driver_Source.c:1:
+/home/kbuntu/ESP32/esp-idf/components/esp_adc/include/esp_adc/adc_oneshot.h:89:87: note: expected 'int *' but argument is of type 'uint16_t *' {aka 'short unsigned int *'}
+   89 | esp_err_t adc_oneshot_read(adc_oneshot_unit_handle_t handle, adc_channel_t chan, int *out_raw);
+      |                                                                                  ~~~~~^~~~~~~
+[3/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/MAX4466_Driver_Demo.c.obj
+[4/9] Linking C static library esp-idf/main/libmain.a
+[5/9] Generating ld/sections.ld
+[6/9] Linking CXX executable MAX4466_Driver.elf
+[7/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/kbuntu/ESP32/MAX4466_Driver/build/MAX4466_Driver.bin
+[8/9] cd /home/kbuntu/ESP32/MAX4466_Driver/build/esp-idf/esptool_py && /home/kbuntu/.espressif/python_env/idf5.3_py3.12_env/bin/python /home/kbuntu/ESP32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/kbuntu/ESP32/MAX4466_Driver/build/partition_table/partition-table.bin /home/kbuntu/ESP32/MAX4466_Driver/build/MAX4466_Driver.bin
+MAX4466_Driver.bin binary size 0x33ee0 bytes. Smallest app partition is 0x100000 bytes. 0xcc120 bytes (80%) free.
+[8/9] cd /home/kbuntu/ESP32/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/kbuntu/ESP32/esp-idf -D "SERIAL_TOOL=/home/kbuntu/.espressif/python_env/idf5.3_py3.12_env/bin/python;;/home/kbuntu/ESP32/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/kbuntu/ESP32/MAX4466_Driver/build -P /home/kbuntu/ESP32/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 115200 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 MAX4466_Driver.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
