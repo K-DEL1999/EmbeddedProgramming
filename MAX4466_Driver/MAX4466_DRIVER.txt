@@ -9,5 +9,11 @@ Possible improvements would be to find a better way to sample instead of just wa
 amount of time and then taking a sample. I guess maybe take the average of samples over a 
 period of time ? 
 
+This microphone was provided an analog value so in the future we should try to process that
+value and clear up that value -- add low pass filter and external ADC which would send data
+to esp via i2s. You had a lot of trouble trying to play back the audio but kept getting 
+sound that was not understandable. After watching a video, you found it was a sound level detector.
+We will get back to it though ! Great work.  
+
 This was also my first time soldering. Long story short, it was awesome. Great work, keep going.
 Im proud of you. 
