@@ -21,7 +21,7 @@ Users are provided a configuration function, transmit function and a receive fun
 
 UART is configured depending on the configuration functions arguments. Users can set the **baud rate**, **data frame size**, and **polarity**. Values are limited to the predefined values set in the following enumeratiions.
 
-Baud rate 
+### Baud rate values
 ```c
 typedef enum {
     Baud_Rate_0 = 9600,
@@ -32,7 +32,7 @@ typedef enum {
 } baud_rate_t;
 ```
 
-Data frame size
+### Data frame size values
 ```c
 typedef enum {
     frame_size_0 = 5,
@@ -43,7 +43,7 @@ typedef enum {
 } data_frame_size_t;
 ```
 
-Polarity bit
+### Polarity bit values
 ```c
 typedef enum {
     ON = 1,
