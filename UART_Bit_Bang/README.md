@@ -1,4 +1,4 @@
-# Bit-Banged UART for ESP32 microcontrollers
+# Bit-Banged UART For ESP32 Microcontrollers
 
 A simple, instructional project demonstrating the underlying logic of the UART (Universal Asynchronous Receiver-Transmitter) protocol. UART operates with only 2 wires, TX being for transmitting data and RX for receiving data. With bit-banging each line is assigned a GPIO pin and initialized as an input or output pin depending on its purpose (receiving or transmitting data). Along with initializing GPIO pins a timer is required due to its asynchronous design. This project is meant to be used as an alternative to the built in UART peripheral most microcontrollers have while also serving the function of showing users how the protocol actually works.
 
@@ -17,11 +17,11 @@ void uart_receive(uint8_t * data, uint32_t size);
 ```
 Users are provided a configuration function, transmit function and a receive function. 
 
-## How to configure UART
+## How To Configure UART
 
-UART is configured depending on the configuration functions arguments. Users can set the **baud rate**, **data frame size**, and **polarity**. Values are limited to the predefined values set in the following enumeratiions.
+UART is configured depending on the configuration functions arguments. Users can set the **baud rate**, **data frame size**, and **polarity**. Values are limited to the predefined values set in the following enumeratiions...
 
-### Baud rate values
+### Baud Rate Values
 ```c
 typedef enum {
     Baud_Rate_0 = 9600,
@@ -32,7 +32,7 @@ typedef enum {
 } baud_rate_t;
 ```
 
-### Data frame size values
+### Data Frame Size Values
 ```c
 typedef enum {
     frame_size_0 = 5,
@@ -43,7 +43,7 @@ typedef enum {
 } data_frame_size_t;
 ```
 
-### Polarity bit values
+### Polarity Bit Values
 ```c
 typedef enum {
     ON = 1,
