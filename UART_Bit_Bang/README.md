@@ -117,7 +117,7 @@ void configure_uart(uint32_t br, uint8_t dfs, uint8_t pb){
 
 ## Data Transmission and Data Reception
 
-UART transmits by sending a start bit to alert the receiver that data is going to be transmitted, sends the data bit by bit and then terminates the transmission with a stop bit. Each bit's state corresponds to either a high or low on the line. The baud rate determines how long the line is held high and low. 
+UART transmissions work by sending a start bit to alert the receiver that data is going to be transmitted, sends the data bit by bit and then terminates the transmission with a stop bit. Each bit's state corresponds to either a high or low on the line. The baud rate determines how long the line is held high and low. 
 ```c
 void uart_transmit(uint8_t * data, uint32_t size){
     ESP_ERROR_CHECK(gptimer_start(gptimer));
@@ -142,7 +142,55 @@ static void transmit_packet(void){
 }
 ```
 
-<img width="1663" height="977" alt="image" src="https://github.com/user-attachments/assets/4ae8f0f4-e468-48ee-abba-7ecab29f7f78" />
+UART receives by constantly monitoring for the start bit on the TX line, then reads the state of the TX line periodically depending on the baud rate and then terminates once the stop bit is received. The UART must be aware of the size of the data frame before communcation so it knows when to read for the stop bit. This means that both the transmitter and receiver must have the same data frame size in order to function correctly and reliably!
+
+```c
+
+void uart_receive(uint8_t * data, uint32_t size){
+    while (size){
+        receive_packet();
+        *(data + index) = byte;         
+        index++;
+        size--;
+        byte = 0;
+    }
+
+    index = 0;
+}
+
+static void receive_packet(void){
+    receive_start_bit();
+    receive_data_frame();
+    receive_stop_bits();
+}
+
+```
+
+## How to Use
+
+1. Ensure you have a working ESP32 development environment (this project was designed using the ESP-IDF development framework)
+2. Clone the repository
+3. Change the `TX` and `RX` pin numbers in the `UART_Header.h` file to pins you wish to use
+4. Connect devices - connect TX pin in one device to the RX pin in the other and vice versa
+5. Build and Flash
+
+### If using ESP-IDF
+```sh
+idf.py build
+idf.py flash
+```
+
+## Application
+
+- **Can be used as an alternative to the built in ESP32 UART peripheral**
+- **Better understand the inner workings of the UART protocol** 
+
+# Logic Analyzer Results
+
+<img width="1521" height="716" alt="image" src="https://github.com/user-attachments/assets/936d7ec8-b26f-4234-b721-fe74fe4a629c" />
+
+
+
 
 
 
