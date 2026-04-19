@@ -115,6 +115,36 @@ void configure_uart(uint32_t br, uint8_t dfs, uint8_t pb){
 }
 ```
 
+## Data Transmission and Data Reception
+
+UART transmits by sending a start bit to alert the receiver that data is going to be transmitted, sends the data bit by bit and then terminates the transmission with a stop bit. Each bit's state corresponds to either a high or low on the line. The baud rate determines how long the line is held high and low. 
+```c
+void uart_transmit(uint8_t * data, uint32_t size){
+    ESP_ERROR_CHECK(gptimer_start(gptimer));
+ 
+    while (size){
+        byte = *(data + index);
+        transmit_packet();
+        size--;
+        index++;
+    }
+    
+    index = 0;
+    
+    gptimer_stop(gptimer);
+    time_to_send_receive_data = 0;
+}
+
+static void transmit_packet(void){
+    send_start_bit();
+    send_data_frame();
+    send_stop_bits();
+}
+```
+
+<img width="1663" height="977" alt="image" src="https://github.com/user-attachments/assets/4ae8f0f4-e468-48ee-abba-7ecab29f7f78" />
+
+
 
 
 
