@@ -51,6 +51,52 @@ typedef enum {
 } parity_bit_t;
 ```
 
+Once you've selected the values based on your needs you simply call configure_uart with the desired values...
+
+```c
+configure_uart(Baud_Rate_4, frame_size_3, ON);
+```
+
+This function then assigns those values to the static uart_config struct defined in the UART_Source file. 
+
+```c
+static uart_config_t uc;
+
+.
+.
+.
+
+void configure_uart(uint32_t br, uint8_t dfs, uint8_t pb){
+    uc.baud_rate = br;
+    uc.data_frame_size = dfs;
+    uc.parity_bit = pb;
+    /* DELAY needs a cheap way to divide -- 1000000 / baud_rate*/
+    /*SET DELAY HERE IN MICROSECONDS*/
+
+    switch(br){
+        case 9600:
+            DELAY = BR_0;
+            break;
+        case 19200:
+            DELAY = BR_1;
+            break;
+        case 38400:
+            DELAY = BR_2;
+            break;
+        case 62500:
+            DELAY = BR_3;
+            break;
+        case 125000:
+            DELAY = BR_4;
+            break;
+        default:
+            break;
+    }
+    
+}
+```
+
+
 
 
 
