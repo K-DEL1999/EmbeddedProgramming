@@ -17,6 +17,15 @@ void uart_receive(uint8_t * data, uint32_t size);
 ```
 Users are provided a configuration function, transmit function and a receive function. 
 
+## Setting the GPIO pins
+
+To set the GPIO pins you wish to use simply replace _desired pin_ with the pin number. This can be found in the UART_Header.h file lines 23 and 25
+
+#define TX _desired pin_
+#define GPIO_TX_PIN_SEL (1ULL << TX)
+#define RX _desired pin_
+#define GPIO_RX_PIN_SEL (1ULL << RX)
+
 ## How To Configure UART
 
 UART is configured depending on the configuration functions arguments. Users can set the **baud rate**, **data frame size**, and **polarity**. Values are limited to the predefined values set in the following enumeratiions...
@@ -52,14 +61,24 @@ typedef enum {
 ```
 
 Once you've selected the values based on your needs you simply call configure_uart with the desired values...
-
+ 
 ```c
 configure_uart(Baud_Rate_4, frame_size_3, ON);
 ```
 
-This function then assigns those values to the static uart_config struct defined in the UART_Source file. 
+With these values the configure_uart function can then initialize the uart_config_t struct which determines the behavior of the send and receive functions. Below the uart_config struct is shown along with a declaration of a variable of type uart_config and the defintion of the config function. 
 
 ```c
+typedef struct {
+    baud_rate_t baud_rate;
+    data_frame_size_t data_frame_size;
+    parity_bit_t parity_bit;
+} uart_config_t;
+
+.
+.
+.
+
 static uart_config_t uc;
 
 .
