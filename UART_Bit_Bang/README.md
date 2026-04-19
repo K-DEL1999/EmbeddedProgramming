@@ -185,9 +185,6 @@ idf.py flash
 - **Can be used as an alternative to the built in ESP32 UART peripheral**
 - **Better understand the inner workings of the UART protocol** 
 
-# Logic Analyzer Results
-
-<img width="1521" height="716" alt="image" src="https://github.com/user-attachments/assets/936d7ec8-b26f-4234-b721-fe74fe4a629c" />
 
 
 
