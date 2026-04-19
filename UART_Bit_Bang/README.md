@@ -10,10 +10,16 @@ A simple, instructional project demonstrating the underlying logic of the UART (
 
 ## Available UART Functions 
 
-<img width="515" height="99" alt="image" src="https://github.com/user-attachments/assets/0a92e763-d121-4d50-a62a-21145a8050cd" />
+```c
+void configure_uart(uint32_t br, uint8_t dfs, uint8_t pb);
+void uart_transmit(uint8_t * data, uint32_t size);
+void uart_receive(uint8_t * data, uint32_t size);
+```
+Users are provided a configuration function, transmit function and a receive function. UART is configured depending on the arguments provided in the configuration function. 
 
 ## How to configure UART
 
-<img width="515" height="120" alt="image" src="https://github.com/user-attachments/assets/7fb88286-703a-4b01-baf2-302344eb8ea1" />
+The 
+
 
 
