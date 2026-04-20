@@ -39,7 +39,7 @@ void set_config(uint8_t config);
 float get_temp(void);
 ```
 
-## Setting the GPIO pins
+## Setting the GPIO pin
 
 You can set the pin in the DS18B20_Drvier_Header.h. You can replace <pin_number> with the desired pin
 
