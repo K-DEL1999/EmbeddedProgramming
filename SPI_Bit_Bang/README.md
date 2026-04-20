@@ -1,4 +1,4 @@
-# Bit-Banged UART For ESP32 Microcontrollers
+# Bit-Banged SPI For ESP32 Microcontrollers
 
 This project is intended for educational purposes but can serve as an alterantive to the native SPI peripheral most microcontrollers house. SPI (Serial Peripheral Interface) is a synchronous protocol, meaning a clock is shared amongst all connected devices, that requires 4 lines. Of course there are variations of SPI which may require more or less than 4 lines but the main concept remains unchanged - send and receive bits on rising edge or falling edge. SPI can be full duplex (transmit and receive simultaneously) or half duplex (transmit and receive seperately). This driver implements a half duplex SPI. The lines in SPI are CLK, MOSI, MISO and CS. CLK is clock, MOSI is data out, MISO is data in and CS selects the receiver. This bit banged implementation of SPI will allow users to understand how SPI works while also allowing them to connect to modules via SPI
 
