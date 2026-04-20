@@ -19,12 +19,12 @@ Users are provided a configuration function, transmit function and a receive fun
 
 ## Setting the GPIO pins
 
-To set the GPIO pins you wish to use simply replace <PIN NUMBER> with the pin number. This can be found in the UART_Header.h file lines 23 and 25
+To set the GPIO pins you wish to use simply replace <PIN_NUMBER> with the pin number. This can be found in the UART_Header.h file lines 23 and 25
 
 ```c
-#define TX <PIN NUMBER>
+#define TX <PIN_NUMBER>
 #define GPIO_TX_PIN_SEL (1ULL << TX)
-#define RX <PIN NUMBER>
+#define RX <PIN_NUMBER>
 #define GPIO_RX_PIN_SEL (1ULL << RX)
 ```
 
