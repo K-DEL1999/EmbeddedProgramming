@@ -1,5 +1,6 @@
 # Bit-Banged I2C For ESP32 Microcontrollers
 
+This project was my gate way into the world of embedded systems 
 
 
 ## Project Structure
@@ -7,7 +8,7 @@
 - **I2C_Master_Source.c**: function defintions, helper function declarations, helper function defintions 
 - **I2C_Master_Header.h**: function declarations and struct definitions
 - **I2C_Master_Demo.c**: example showing how to use I2C Master driver functions
-
+  
 - **I2C_Slave_Source.c**: function defintions, helper function declarations, helper function definitions 
 - **I2C_Slave_Header.h**: function declarations and struct defiintions
 - **I2C_Slave_Demo.c**: example showing how to use I2C Slave driver functions
