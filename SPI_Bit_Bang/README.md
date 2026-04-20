@@ -151,6 +151,82 @@ void spi_master_receive(uint8_t * data){ // returns number of bytes of data
 }
 ```
 
+### SPI Slave Reception
+
+The slave receive function runs while the CS line is set HIGH. It keeps track of the clock and only reads from the line on a rising edge. Using bit manipulation it reconstructs the data bit by and bit allow for a reliable and efficient serial transfer of data. The function is dependent on both the state of the SCK pin and the CS pin. The slave can only receive when the CS pin is set HIGH and the MOSI is set HIGH.
+
+```c
+void spi_slave_receive(uint8_t * data){
+    uint8_t byte = 0, cnt = 0, index = 0; 
+    clockWatchDog = 0;
+
+    gpio_set_level(SPI_MISO, 0);
+
+    while (!gpio_get_level(SPI_CS)){
+        if (clock == CLOCK && gpio_get_level(SPI_SCK) == !CLOCK){
+            usleep(5);
+            byte |= (gpio_get_level(SPI_MOSI) << cnt);
+            cnt++;
+            if (cnt == 8){
+                *(data + index) = byte;
+                index++;
+                cnt = 0;
+                byte = 0;
+            }
+            clock = !CLOCK;
+            clockWatchDog = 0;
+        }
+
+        if (gpio_get_level(SPI_SCK) == CLOCK) { 
+            clock = CLOCK; 
+        }
+        
+        clockWatchDog++;
+        if (clockWatchDog > 100000){
+            SPIERRNO |= 1;
+            return;
+        }
+    }
+}
+```
+
+### SPI Slave Transmission
+
+The slave transmission function is very similar to the slave reception function but instead of reading from the MOSI it writes to the MISO. The slave cannot initiate a data transfer but has to be signaled by the master to send data. When selecting the chip (setting CS HIGH on one of the CS lines) the master also sets the MOSI to HIGH or LOW depending on whether it wants to send or receive from said chip. If MOSI is HIGH when setting CS then master is sending and if MOSI is LOW than master is requesting data.
+
+```c
+void spi_slave_transmit(uint8_t * data, uint32_t size){
+    uint8_t cnt = 0, index = 0;
+    clockWatchDog = 0;
+
+    gpio_set_level(SPI_MISO, 1);
+
+    while (!gpio_get_level(SPI_CS)){
+        if (clock == CLOCK && gpio_get_level(SPI_SCK) == !CLOCK){
+            gpio_set_level(SPI_MISO, ((((*(data + index)) >> cnt) & 1)));
+            cnt++;
+            if (cnt == 8){
+                cnt = 0;
+                index++;
+            }
+            clock = !CLOCK;
+            clockWatchDog = 0;
+        }
+
+        if (gpio_get_level(SPI_SCK) == CLOCK) { 
+            clock = CLOCK; 
+        }
+        
+        clockWatchDog++;
+        if (clockWatchDog > 100000){
+            SPIERRNO |= (1 << 1);
+            return;
+        }
+
+    }
+}
+```
+
 ## How to Use
 
 1. Ensure you have a working ESP32 development environment (this project was designed using the ESP-IDF development framework)
