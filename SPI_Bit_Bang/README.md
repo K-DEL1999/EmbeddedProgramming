@@ -107,6 +107,8 @@ void spi_master_transmit(uint8_t * data, uint32_t size){
 }
 ```
 
+### SPI Master Reception
+
 To receive data, the master selects the chip and indicates it is ready to receive by setting the MOSI line high. The data is sent bit by bit and follows the same clock updating mechanism as before but instead of setting the MOSI line it reads the MISO line.
 
 ```c
