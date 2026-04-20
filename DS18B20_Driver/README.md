@@ -35,8 +35,6 @@ bool read_power_supply(void);
 These are provided in case a user does not wish to implement their own functions and just want to obtain the data from the module.
 
 ```c
-void set_TH(uint8_t TH);
-void set_TL(uint8_t TL);
 void set_config(uint8_t config);
 float get_temp(void);
 ```
@@ -72,7 +70,7 @@ void app_main(){
 1. Ensure you have a working ESP32 development environment (this project was designed using the ESP-IDF development framework)
 2. Clone the repository
 3. Change the `DQ` pin numbers in the `DS18B20_Driver_Header.h` file to the pin you want to use
-4. Connect devices 
+4. Connect devices - DQ to DQ
 5. Build and Flash
 
 ### If using ESP-IDF
