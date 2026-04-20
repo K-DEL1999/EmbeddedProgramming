@@ -155,9 +155,13 @@ void spi_master_receive(uint8_t * data){ // returns number of bytes of data
 
 1. Ensure you have a working ESP32 development environment (this project was designed using the ESP-IDF development framework)
 2. Clone the repository
-3. Change the `MOSI`, `MISO`, `SCK` and `CS` pin numbers in the `SPI__Header.h` file to pins you wish to use
-4. Connect devices - connect TX pin in one device to the RX pin in the other and vice versa
-5. Build and Flash
+3. Flash transmitter with Master SPI driver
+4. Flash receiver with Slave SPI driver
+5. Change the `MOSI`, `MISO`, `SCK` and `CS` pin numbers in the `SPI__Header.h` file to pins you wish to use
+6. Connect devices - connect MOSI pin in one device to the MISO pin in the other 
+7. Connect devices - connect MISO pin in one device to the MOSI pin in the other
+8. Connect devices - connect SCK pin in one device to the SCK pin in the other
+9. Connect devices - connect CS pin in one device to the CS pin in the other
 
 ### If using ESP-IDF
 ```sh
@@ -167,8 +171,8 @@ idf.py flash
 
 ## Application
 
-- **Can be used as an alternative to the built in ESP32 UART peripheral**
-- **Better understand the inner workings of the UART protocol** 
+- **Can be used as an alternative to the built in ESP32 SPI peripheral**
+- **Better understand the inner workings of the SPI protocol (Polarity: 0, Phase: 0)** 
 
 
 
