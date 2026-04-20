@@ -36,8 +36,11 @@ To set the GPIO pin replace <PIN_NUMBER> with the desired pin number. Setting th
 
 
 | MOSI| data out |  
+| :---: | :---: |
 | MISO | data in |
+| :---: | :---: |
 | CS | chip select |
+| :---: | :---: |
 | SCK | clock |   
 
 ```c
