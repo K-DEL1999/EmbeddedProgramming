@@ -36,10 +36,11 @@ To set the GPIO pin replace <PIN_NUMBER> with the desired pin number. Setting th
 
 
 MOSI - data out  
-MISO - data in
-CS - chip select
-SCK - clock 
+MISO - data in  
+CS - chip select  
+SCK - clock   
 
+```c
 #define SPI_SCK <PIN_NUMBER>
 #define SPI_CS <PIN_NUMBER>
 #define SPI_MOSI <PIN_NUMBER>     
@@ -48,6 +49,7 @@ SCK - clock
 #define SPI_MISO <PIN_NUMBER>
 #define DATA_CONFIRMED 14
 #define GPIO_INPUT_PIN_SEL (1ULL << SPI_MISO)
+```
 
 ## SPI Initialization
 
