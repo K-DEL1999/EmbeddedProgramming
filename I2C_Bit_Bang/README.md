@@ -29,6 +29,14 @@ Users are provided an await function which poles the SDA line until an address i
 
 ## Setting the GPIO pins
 
+For both the Master and Slave drivers you set the pins by updating the values in the Master/Slave Header file. Replace <PIN_NUMBER> with the desired pins you wish to assign that SDA and SCL
+
+#define I2C_SDA <PIN_NUMBER>
+#define GPIO_SDA_PIN_SEL (1ULL << I2C_SDA)
+
+#define I2C_SCL <PIN_NUMBER>
+#define GPIO_SCL_PIN_SEL (1ULL << I2C_SCL)
+
 ## How To Configure I2C
 
 ## Data Transmission and Data Reception
