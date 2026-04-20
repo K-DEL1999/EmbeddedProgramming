@@ -29,6 +29,33 @@ void spi_slave_transmit(uint8_t * data, uint32_t size);
 void spi_slave_receive(uint8_t * data);
 ```
 Users are provided an intialization function, transmit function and a receive function. 
+### SPI Poling for Slave
+
+You must pole (or set an interrupt) the CS line. Once the CS line is HIGH you then check the MISO line to determine whether data should be transmitted or received
+
+```c
+     while (1){
+        while (gpio_get_level(SPI_CS) == 1){}       
+ 
+        if (gpio_get_level(SPI_MOSI)){ // Master is requesting data
+            spi_slave_transmit(data_tx, ARRAY_SIZE);
+            if (SPIERRNO != 0){
+                goto RESTART_FROM_TRANSMIT;
+            }
+        }
+        else { // Master is sending data
+            spi_slave_receive(data_rx);
+            if (SPIERRNO != 0){
+                goto RESTART_FROM_RECEIVE;
+            }
+            
+            verify_data();
+        }
+
+        init_slave_spi();       
+    }
+
+```
 
 ## Setting the GPIO pins
 
