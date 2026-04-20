@@ -5,13 +5,13 @@ This project is intended for educational purposes but can serve as an alterantiv
 ## Project Structure
 
 ### Master Driver
-- **SPI_Master_Source.c**: function defintions, helper function declarations, helper function defintions 
+- **SPI_Master_Source.c**: function defintions, helper function declarations, helper function definitions 
 - **SPI_Master_Header.h**: function declarations and struct definitions
 - **SPI_Master_Demo.c**: example showing how to use SPI Master driver functions
 
 ### Slave Driver
 - **SPI_Slave_Source.c**: function defintions, helper function declarations, helper function definitions 
-- **SPI_Slave_Header.h**: function declarations and struct defiintions
+- **SPI_Slave_Header.h**: function declarations and struct definitions
 - **SPI_Slave_Demo.c**: example showing how to use SPI Slave driver functions
 
 ## Available SPI Master Functions 
