@@ -32,7 +32,24 @@ Users are provided an intialization function, transmit function and a receive fu
 
 ## Setting the GPIO pins
 
-## How To Configure UART
+To set the GPIO pin replace <PIN_NUMBER> with the desired pin number. Setting the pins for Master and Slave are the same. 
+
+
+<p>MOSI - data out
+MISO - data in
+CS - chip select
+SCK - clock <p>
+
+#define SPI_SCK <PIN_NUMBER>
+#define SPI_CS <PIN_NUMBER>
+#define SPI_MOSI <PIN_NUMBER>     
+#define GPIO_OUTPUT_PIN_SEL ((1ULL << SPI_SCK) | (1ULL << SPI_CS) | (1ULL << SPI_MOSI))
+
+#define SPI_MISO <PIN_NUMBER>
+#define DATA_CONFIRMED 14
+#define GPIO_INPUT_PIN_SEL (1ULL << SPI_MISO)
+
+## SPI Initialization
 
 ## Data Transmission and Data Reception
 
