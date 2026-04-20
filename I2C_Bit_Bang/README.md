@@ -59,6 +59,51 @@ You can update the addresses for the slave in the I2C_Slave_Header.h
 
 ## Data Transmission and Data Reception
 
+### I2C Master Transmission
+
+Before a transmission the Master has to be sure the SDA line is not busy. The PULL UP resistor ensures the line is high so when Master sees that the line is high for a period of time it takes control of it and proceeds to set both lines low - which is the start condition, waking up all devices on the line - followed by sending and address. In a transmission the address with 0 as the MSB will be sent.
+
+```c
+uint32_t I2C_transmit(uint8_t * data, uint32_t size){
+    wait_for_bus_idle_state();
+    start_condition();
+    if (send_address_frame(SLAVE_ADDRESS_WRITE)) return 1;
+    if (send_data(data, size)) return 1;
+    return 0;
+}
+```
+
+### I2C Master Reception
+
+The process for a master receive is the same as the transmit but the address with 1 as the MSB is sent and the master reads from the line instead of writing to it. This is where configuring the pin as **open drain** is a requirement since you must be able to read the state of the line and also be able to set it.
+
+```c
+uint32_t I2C_receive(uint8_t * data, uint32_t size){
+    wait_for_bus_idle_state();
+    start_condition();
+    if (send_address_frame(SLAVE_ADDRESS_READ)) return 1;
+    if (receive_data(data, size)) return 1;
+    return 0;
+}
+```
+
+### I2C Slave Transmission and Reception
+
+
+
+```c
+uint32_t I2C_await_request(uint8_t * data, uint32_t size){
+    sleep_until_needed();
+    get_address();
+    
+    if (read_or_write == 2){return 1;} // No error -- not slave master looking for 
+
+    // transmit returns success or fail status of transmission
+    // receive returns size of data received
+    return (read_or_write) ? I2C_transmit(data, size) : I2C_receive(data);
+}
+```
+
 ## How to Use
 
 1. Ensure you have a working ESP32 development environment (this project was designed using the ESP-IDF development framework)
