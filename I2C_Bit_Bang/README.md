@@ -1,19 +1,22 @@
 # Bit-Banged I2C For ESP32 Microcontrollers
 
-This project was my gate way into the world of embedded systems 
-
+This project was my gate way into the world of embedded systems and introduced me to the idea of bit banging. I2C (Inter-Intergrated Circuit) is a synchronous 2 wire - SDA and SCL - serial communcation protocol. It is among the most popular serial communication protocols and is very efficient in short distance communcation with mutliple devices/peripherals. Microcontrollers will typically have an onboard I2C peripheral but this driver offers an alternative that shows users how the protocol works. The driver is does not challenge the native I2C protocol in any performance aspects ( since it requires CPU time to perform the data transfer while the peripheral doesnt ) but it does teach users of the driver how I2C can be implemented. With bit banging GPIO pins are manually set HIGH and LOW to reflect the states of the clock and the bits in the data. Therefore 2 GPIO pins need to be intialized to perform any kind of bit banging. This driver can be used as an alternative to the built in I2C peripheral but if speed and reliablity are what you seek than defer to the onboard I2C. 
 
 ## Project Structure
 
+### Master Driver
 - **I2C_Master_Source.c**: function defintions, helper function declarations, helper function defintions 
 - **I2C_Master_Header.h**: function declarations and struct definitions
 - **I2C_Master_Demo.c**: example showing how to use I2C Master driver functions
-  
+
+### Slaver Driver
 - **I2C_Slave_Source.c**: function defintions, helper function declarations, helper function definitions 
 - **I2C_Slave_Header.h**: function declarations and struct defiintions
 - **I2C_Slave_Demo.c**: example showing how to use I2C Slave driver functions
 
-## Available SPI Master Functions 
+## Available I2C Master Functions 
+
+## Available I2C Slave Functions 
 
 ## Setting the GPIO pins
 
