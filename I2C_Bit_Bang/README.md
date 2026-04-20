@@ -55,7 +55,7 @@ You can update the addresses for the slave in the I2C_Slave_Header.h
 #define SLAVE_ADDRESS_READ 0b11111001
 ```
   
-**If changing addresses remember they MUST BE THE SAME !**
+**If you decide to change the addresses remember they MUST BE THE SAME !**
 
 ## Data Transmission and Data Reception
 
