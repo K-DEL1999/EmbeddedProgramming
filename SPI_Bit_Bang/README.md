@@ -53,7 +53,7 @@ SCK - clock
 
 ## SPI Initialization
 
-This initialization sets up the proper conditions for an idle SPI meaning that these are the states of the pins when the microcontroller is neither transmitting nor receiving.
+This initialization sets up the proper conditions for an idle SPI meaning that these are the states of the pins when the microcontroller is neither transmitting nor receiving. This SPI is fixed to a **polarity of 0 and phase of 0**.  
 
 ```c  
 void init_master_spi(void){
@@ -65,11 +65,50 @@ void init_master_spi(void){
 
 ## Data Transmission and Data Reception
 
+### Master
+
+```c
+void spi_master_transmit(uint8_t * data, uint32_t size){
+    uint32_t index = 0;
+
+    gpio_set_level(SPI_CS, 0); // 0 indicates that someone is occupy/controlling the bus
+    gpio_set_level(SPI_MOSI, 0); // Slave reads MOSI and if low, master will transmit data
+    
+    // Wait for MISO confirmation --- TEST -------------------
+    // Slave will indicate that it is ready by repsonding with the state of the MOSI
+    while (gpio_get_level(SPI_MISO) != 0){usleep(1);} 
+    // ------------------------------------------------------    
+
+    while (size){
+        for (uint32_t cnt = 0; cnt < 8; cnt++){
+            gpio_set_level(SPI_MOSI, (*(data + index) & (1 << cnt)) );
+
+            clock = !clock;
+            gpio_set_level(SPI_SCK, clock);
+
+            usleep(10);
+
+            clock = !clock;
+            gpio_set_level(SPI_SCK, clock);
+
+            usleep(10); 
+        }
+      
+        index++;  
+        size--;
+    }
+
+    // Reset clock variables 
+    clock = CLOCK;
+
+}
+```
+
 ## How to Use
 
 1. Ensure you have a working ESP32 development environment (this project was designed using the ESP-IDF development framework)
 2. Clone the repository
-3. Change the `TX` and `RX` pin numbers in the `UART_Header.h` file to pins you wish to use
+3. Change the `MOSI`, `MISO`, `SCK` and `CS` pin numbers in the `SPI__Header.h` file to pins you wish to use
 4. Connect devices - connect TX pin in one device to the RX pin in the other and vice versa
 5. Build and Flash
 
