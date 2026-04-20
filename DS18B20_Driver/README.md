@@ -1,18 +1,43 @@
 # DS18B20 Driver For ESP32 Microcontrollers
 
-This project is intended for educational purposes but can serve as an alterantive to the native SPI peripheral most microcontrollers house. SPI (Serial Peripheral Interface) is a synchronous protocol, meaning a clock is shared amongst all connected devices, that requires 4 lines. Of course there are variations of SPI which may require more or less than 4 lines but the main concept remains unchanged - send and receive bits on rising edge or falling edge. SPI can be full duplex (transmit and receive simultaneously) or half duplex (transmit and receive seperately). This driver implements a half duplex SPI. The lines in SPI are CLK, MOSI, MISO and CS. CLK is clock, MOSI is data out, MISO is data in and CS selects the receiver. This bit banged implementation of SPI will allow users to understand how SPI works while also allowing them to connect to modules via SPI
+This is a driver for the DS18B20 temperature sensor written in C. It enables communcation between an ESP32 microcontroller and multiple DS18B20 temperature sensors. The means of communication is through a 1 wire protocol unique to this sensor.
 
 ## Project Structure
 
-- **SPI_Master_Source.c**: function defintions, helper function declarations, helper function defintions 
-- **SPI_Master_Header.h**: function declarations and struct definitions
-- **SPI_Master_Demo.c**: example showing how to use SPI Master driver functions
+- **DS18B20_Source.c**: function defintions, helper function declarations, helper function defintions 
+- **DS18B20_Header.h**: function declarations and struct definitions
+- **DS18B20_Demo.c**: example showing how to use SPI Master driver functions
 
-- **SPI_Slave_Source.c**: function defintions, helper function declarations, helper function definitions 
-- **SPI_Slave_Header.h**: function declarations and struct defiintions
-- **SPI_Slave_Demo.c**: example showing how to use SPI Slave driver functions
+## Available Functions 
 
-## Available SPI Master Functions 
+### Low Level Functions
+
+```c
+// ROM cmds
+bool search_rom(void);
+bool read_rom(void);
+bool skip_rom(void);
+bool match_rom(uint64_t rom_no);
+bool alarm_search(void);
+
+// Memory cmds
+void write_scratchpad(void);
+void read_scratchpad(void);
+void copy_scratchpad(void);
+void convert_temp(void);
+void recall_E2(void);
+bool read_power_supply(void);
+```
+
+### High Level Functions
+
+```c
+// Helper functions for write_scratchpad 
+void set_TH(uint8_t TH);
+void set_TL(uint8_t TL);
+void set_config(uint8_t config);
+float get_temp(void);
+```
 
 ## Setting the GPIO pins
 
