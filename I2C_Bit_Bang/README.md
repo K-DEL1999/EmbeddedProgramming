@@ -15,12 +15,21 @@ This project was my gate way into the world of embedded systems and introduced m
 - **I2C_Slave_Demo.c**: example showing how to use I2C Slave driver functions
 
 ## Available I2C Master Functions 
+```c
+uint32_t I2C_transmit(uint8_t * data, uint32_t size);
+uint32_t I2C_receive(uint8_t * data, uint32_t size);
+```
+Users are provided only a transmit and receive function. No initialization function is needed due to the simplicity of the I2C protocol
 
 ## Available I2C Slave Functions 
+```c
+uint32_t I2C_await_request(uint8_t * data, uint32_t size);
+```
+Users are provided an await function which poles the SDA line until an address is transmitted. If the address does not match the slave devices address then it returns to poling but if it does match then the device determines whether it will send or receive data depending on the MSB of the address sent - 0 : receive from master, 1 : transmit to master 
 
 ## Setting the GPIO pins
 
-## How To Configure UART
+## How To Configure I2C
 
 ## Data Transmission and Data Reception
 
