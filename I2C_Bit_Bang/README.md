@@ -136,9 +136,12 @@ uint32_t I2C_await_request(uint8_t * data, uint32_t size){
 
 1. Ensure you have a working ESP32 development environment (this project was designed using the ESP-IDF development framework)
 2. Clone the repository
-3. Change the `TX` and `RX` pin numbers in the `UART_Header.h` file to pins you wish to use
-4. Connect devices - connect TX pin in one device to the RX pin in the other and vice versa
-5. Build and Flash
+3. Change the `SDA` and `SCL` pin numbers in the `I2C_Slave_Header.h` file to pins you wish to use for the slave
+4. Change the `SDA` and `SCL` pin numbers in the `I2C_Master_Header.h` file to pins you wish to use for the master
+5. Ensure seperaete PULLUP resistors are attached to the open drain SDA line and the SCL line 
+6. Connect devices - connect SDA pin in one device to the SDA pin in the other
+7. Connect devices - connect SCL pin in one device to the SDA pin in the other
+8. Build and Flash
 
 ### If using ESP-IDF
 ```sh
