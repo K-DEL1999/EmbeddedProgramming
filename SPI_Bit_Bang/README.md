@@ -65,7 +65,9 @@ void init_master_spi(void){
 
 ## Data Transmission and Data Reception
 
-### Master
+### SPI Master Transmission 
+
+The master begins by selecting the chip and setting MOSI low to indicate the start of data transmission. The MOSI line is then updated to reflect the current bit of the byte being sent followed by a change in state of the clock. After a period of time the clock is changed again and then next bit is transmitted until all the data has been sent.
 
 ```c
 void spi_master_transmit(uint8_t * data, uint32_t size){
@@ -99,6 +101,48 @@ void spi_master_transmit(uint8_t * data, uint32_t size){
     }
 
     // Reset clock variables 
+    clock = CLOCK;
+
+}
+```
+
+To receive the master selects the chip and indicates it is ready to receive data by setting the MOSI high. The data is sent bit by bit and follows the same clock pattern as before but instead of setting the MOSI line it reads the MISO line.
+
+```c
+void spi_master_receive(uint8_t * data){ // returns number of bytes of data
+    uint32_t byte = 0, index = 0, size = ARRAY_SIZE;
+
+    gpio_set_level(SPI_CS, 0); // 0 indicates that someone is occupy/controlling the bus
+    gpio_set_level(SPI_MOSI, 1); // slave reads MOSI and if high, master is requesting data   
+
+    // Wait for MISO confirmation --- TEST -------------------
+    // Slave will indicate that it is ready by returning the state of the MOSI
+    while (gpio_get_level(SPI_MISO) != 1){usleep(1);} 
+    // ------------------------------------------------------
+
+    while(size){
+        byte = 0;
+        
+        for (uint32_t cnt = 0; cnt < 8; cnt++){
+
+            clock = !clock;
+            gpio_set_level(SPI_SCK, clock);
+
+            usleep(10); 
+
+            byte |= (gpio_get_level(SPI_MISO) << cnt);
+
+            clock = !clock;
+            gpio_set_level(SPI_SCK, clock);
+
+            usleep(10); 
+        }
+
+        *(data + index) = byte;
+        index++;
+        size--;
+    }
+    
     clock = CLOCK;
 
 }
