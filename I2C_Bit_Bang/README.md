@@ -61,7 +61,7 @@ You can update the addresses for the slave in the I2C_Slave_Header.h
 
 ### I2C Master Transmission
 
-Before a transmission the Master has to be sure the SDA line is not busy. The PULL UP resistor ensures the line is high so when Master sees that the line is high for a period of time it takes control of it and proceeds to set both lines low - which is the start condition, waking up all devices on the line - followed by sending and address. In a transmission the address with 0 as the MSB will be sent.
+Before a transmission the master has to be sure the SDA line is not busy. The PULL UP resistor ensures the line is high so when master sees that the line is high for a period of time it takes control of it and proceeds to set both lines low - which is the start condition, waking up all devices on the line - followed by sending and address. In a transmission the address with 0 as the MSB will be sent.
 
 ```c
 uint32_t I2C_transmit(uint8_t * data, uint32_t size){
@@ -89,9 +89,37 @@ uint32_t I2C_receive(uint8_t * data, uint32_t size){
 
 ### I2C Slave Transmission and Reception
 
-
+The slave poles until the master signals with the start condition - SDA: LOW & SCL: LOW. Once the start condition is met the slave then begins to receive the incoming address and if it matches its own address then based on the MSB of the address it performs a transmits or prepares to receive data. Below The staic variable read_or_write is set based on whether addresses matches the read or write address. If the address matches either one of the slaves addresses than the corresponding function is called.
 
 ```c
+static volatile uint8_t read_or_write;
+
+    .
+    .
+    .
+
+static void get_address(void){
+    .
+    .
+    .
+
+    if (byte == SLAVE_ADDRESS_WRITE){
+        read_or_write = 0;
+    }
+    else if (byte == SLAVE_ADDRESS_READ){
+        read_or_write = 1;
+    }
+    else { // Addresses did not match
+        printf("Address: %hu\n--------------/", byte);
+        read_or_write = 2;
+        return;
+    }
+
+    .
+    .
+    .
+}
+
 uint32_t I2C_await_request(uint8_t * data, uint32_t size){
     sleep_until_needed();
     get_address();
