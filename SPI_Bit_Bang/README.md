@@ -53,6 +53,16 @@ SCK - clock
 
 ## SPI Initialization
 
+This initialization sets up the proper conditions for an idle SPI meaning that these are the states of the pins when the microcontroller is neither transmitting nor receiving.
+
+```c  
+void init_master_spi(void){
+    gpio_set_level(SPI_SCK, CLOCK);
+    gpio_set_level(SPI_CS, 1);
+    gpio_set_level(SPI_MOSI, 0);
+}
+```
+
 ## Data Transmission and Data Reception
 
 ## How to Use
