@@ -41,6 +41,22 @@ For both the Master and Slave drivers you set the pins by updating the values in
 
 ## How To Configure I2C
 
+There is not much configuration needed for the I2C protocol due to its simplicity. The data frame size is strcitly 8 bits (1 byte) but you could change the address. However you must have 2 copies of the address - one with MSB of 0 and another with MSB of 1. One tells the slave its receiving while the other tells the slave it is transmitting. 
+
+You can update the address for the master in the I2C_Master_Source.c
+```c
+#define SLAVE_ADDRESS_WRITE 0b01111001
+#define SLAVE_ADDRESS_READ 0b11111001
+```
+
+You can update the addresses for the slave in the I2C_Slave_Header.h
+```c
+#define SLAVE_ADDRESS_WRITE 0b01111001
+#define SLAVE_ADDRESS_READ 0b11111001
+```
+  
+**If changing addresses remember they MUST BE THE SAME !**
+
 ## Data Transmission and Data Reception
 
 ## How to Use
