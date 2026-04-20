@@ -35,10 +35,10 @@ Users are provided an intialization function, transmit function and a receive fu
 To set the GPIO pin replace <PIN_NUMBER> with the desired pin number. Setting the pins for Master and Slave are the same. 
 
 
-|MOSI| data out |  
-|MISO | data in  |
-|CS | chip select  |
-|SCK | clock|   
+| MOSI| data out |  
+| MISO | data in |
+| CS | chip select |
+| SCK | clock |   
 
 ```c
 #define SPI_SCK <PIN_NUMBER>
