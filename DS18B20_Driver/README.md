@@ -6,7 +6,6 @@ This is a driver for the DS18B20 temperature sensor written in C. It enables com
 
 - **DS18B20_Source.c**: function defintions, helper function declarations, helper function defintions 
 - **DS18B20_Header.h**: function declarations and struct definitions
-- **DS18B20_Demo.c**: example showing how to use SPI Master driver functions
 
 ## Available Functions 
 
@@ -36,7 +35,6 @@ bool read_power_supply(void);
 These are provided in case a user does not wish to implement their own functions and just want to obtain the data from the module.
 
 ```c
-// Helper functions for write_scratchpad 
 void set_TH(uint8_t TH);
 void set_TL(uint8_t TL);
 void set_config(uint8_t config);
@@ -45,16 +43,36 @@ float get_temp(void);
 
 ## Setting the GPIO pins
 
-## How To Configure UART
+You can set the pin in the DS18B20_Drvier_Header.h. You can replace <pin_number> with the desired pin
 
-## Data Transmission and Data Reception
+```c
+#define DQ <PIN_NUMBER> // Data Line
+#define GPIO_DQ_PIN_SEL (1ULL << DQ) 
+```
+
+## Example
+
+```c
+#include "DS18B20"
+
+void app_main(){
+  float var;
+  set_config(2); // Value can be either 1, 2, 3 or 4
+
+  while (1){
+    var = get_temp();
+    printf("Temp: %6.4f\n", var); // minimun width of 6 and 4 decimal places
+  }
+}
+
+```
 
 ## How to Use
 
 1. Ensure you have a working ESP32 development environment (this project was designed using the ESP-IDF development framework)
 2. Clone the repository
-3. Change the `TX` and `RX` pin numbers in the `UART_Header.h` file to pins you wish to use
-4. Connect devices - connect TX pin in one device to the RX pin in the other and vice versa
+3. Change the `DQ` pin numbers in the `DS18B20_Driver_Header.h` file to the pin you want to use
+4. Connect devices 
 5. Build and Flash
 
 ### If using ESP-IDF
@@ -65,7 +83,6 @@ idf.py flash
 
 ## Application
 
-- **Can be used as an alternative to the built in ESP32 UART peripheral**
-- **Better understand the inner workings of the UART protocol** 
+- **Can be use this driver to read from multiple DS18B20 temperature sensors**
 
 
