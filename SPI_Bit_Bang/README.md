@@ -34,7 +34,16 @@ Users are provided an intialization function, transmit function and a receive fu
 You must pole (or set an interrupt) the CS line. Once the CS line is HIGH you then check the MISO line to determine whether data should be transmitted or received
 
 ```c
-     while (1){
+void app_main(void){
+    
+    init_slave_gpio();
+    init_slave_spi();
+
+    .
+    .
+    .
+        
+    while (1){
         while (gpio_get_level(SPI_CS) == 1){}       
  
         if (gpio_get_level(SPI_MOSI)){ // Master is requesting data
@@ -54,6 +63,7 @@ You must pole (or set an interrupt) the CS line. Once the CS line is HIGH you th
 
         init_slave_spi();       
     }
+}
 
 ```
 
