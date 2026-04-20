@@ -12,6 +12,8 @@ This is a driver for the DS18B20 temperature sensor written in C. It enables com
 
 ### Low Level Functions
 
+These are the functions that send commands to the sensor using the 1 wire protocol. Using these you can create your own high level functions to obtain the temperature reading from a device.
+
 ```c
 // ROM cmds
 bool search_rom(void);
@@ -30,6 +32,8 @@ bool read_power_supply(void);
 ```
 
 ### High Level Functions
+
+These are provided in case a user does not wish to implement their own functions and just want to obtain the data from the module.
 
 ```c
 // Helper functions for write_scratchpad 
